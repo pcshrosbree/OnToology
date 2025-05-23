@@ -7,6 +7,13 @@
 [![Twitter](https://img.shields.io/twitter/follow/OnToology.svg?style=social&label=@OnToology)](https://twitter.com/OnToology) [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 
+> ### MSR changes
+> - Add directory monitoring system for ontology files to avoid the need for using webhooks
+> - Add documentation:
+>   - [Directory monitoring](docs/directory-monitoring.md)
+>   - [Outputs](docs/outputs.md)
+>   - [Configuration](docs/configuration.md)
+
 A system for collaborative ontology development process. Given a repository with an owl file, **OnToology** will survey it and produce diagrams, a complete documentation and validation based on common pitfalls. It also offers seamless publication of user ontologies with w3id using GitHub pages.
 
 You can find a live version of OnToology online: [http://ontoology.linkeddata.es](http://ontoology.linkeddata.es).

@@ -180,3 +180,26 @@ class OTask(models.Model):
     orun = models.ForeignKey(ORun, on_delete=models.CASCADE, related_name='otasks')
     msg = models.TextField(default="")
 
+
+class DirectoryWatch(models.Model):
+    path = models.TextField()
+    user = models.ForeignKey(OUser, on_delete=models.CASCADE, related_name='directory_watches')
+    recursive = models.BooleanField(default=True)
+    description = models.TextField(default='')
+    active = models.BooleanField(default=True)
+    created = models.DateTimeField(auto_now_add=True)
+    last_scan = models.DateTimeField(null=True, blank=True)
+
+    def json(self):
+        return {
+            "id": str(self.id),
+            "path": self.path,
+            "recursive": self.recursive,
+            "description": self.description,
+            "active": self.active,
+            "created": self.created.strftime('%Y-%m-%d %H:%M'),
+            "last_scan": self.last_scan.strftime('%Y-%m-%d %H:%M') if self.last_scan else None,
+        }
+
+    def __unicode__(self):
+        return self.path

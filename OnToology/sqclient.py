@@ -118,6 +118,17 @@ def consume(body):
 
     """
     j = json.loads(body)
+    
+    # Handle directory-based processing
+    if j['action'] == 'directory_magic':
+        directory_watch_id = j['directory_watch_id']
+        logger.debug(" ---  Consuming directory: " + str(directory_watch_id) + "\n" + str(j))
+        logger.debug('starting a directory magic process')
+        handle_directory_action(j, logger)
+        logger.debug(str(directory_watch_id) + " Completed!")
+        return
+    
+    # Handle traditional repo-based processing
     repo_name = j['repo']
     logger.debug(" ---  Consuming: " + repo_name + "\n" + str(j))
     if j['action'] == 'magic':
@@ -175,6 +186,66 @@ def can_proceed(body):
         print(body)
         traceback.print_exc()
         return False
+
+
+def handle_directory_action(j, logger, raise_exp=False):
+    """
+    Handle directory-based ontology processing
+    :param j: message dict
+    :param logger: logger
+    :param raise_exp: whether to raise exceptions
+    :return:
+    """
+    try:
+        logger.debug("try directory action")
+        try:
+            import autoncore
+            autoncore.django_setup_script()
+        except:
+            from OnToology import autoncore
+        
+        from OnToology.models import DirectoryWatch
+        
+        logger.debug("handle_directory_action> ")
+        
+        # Get directory watch info
+        directory_watch_id = j['directory_watch_id']
+        file_path = j['file_path']
+        event_type = j['event_type']
+        
+        try:
+            dir_watch = DirectoryWatch.objects.get(id=directory_watch_id)
+            logger.debug(f"Processing file {file_path} from directory {dir_watch.path}")
+            
+            # Call directory magic function
+            autoncore.directory_magic(
+                directory_watch=dir_watch,
+                file_path=file_path,
+                event_type=event_type,
+                raise_exp=raise_exp
+            )
+            logger.debug("directory magic success")
+            
+        except Exception as e:
+            logger.debug("Exception in directory magic")
+            logger.debug(f"Exception for directory {directory_watch_id}: {str(e)}")
+            logger.error(f"Exception in directory magic for {directory_watch_id}: {str(e)}")
+            print(f"Exception in directory magic for {directory_watch_id}: {str(e)}")
+            traceback.print_exc()
+            if raise_exp:
+                raise Exception(str(e))
+        
+        logger.debug("directory magic is done")
+        
+    except Exception as e:
+        logger.debug("Exception 2 in directory action")
+        logger.debug(f"Exception 2 for directory magic: {str(e)}")
+        logger.error(f"Exception 2 for directory magic: {str(e)}")
+        traceback.print_exc()
+        if raise_exp:
+            raise Exception(str(e))
+    
+    logger.debug(f"finished handle_directory_action: {str(j)}")
 
 
 def handle_publish(j, logger):
@@ -335,4 +406,3 @@ if __name__ == "__main__":
     print(OUser.objects.all())
     print(Repo.objects.all())
     client_loop(host, port)
-

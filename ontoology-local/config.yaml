@@ -1,0 +1,27 @@
+# OnToology Local Configuration File
+# This file contains default settings for the ontology processing tools
+
+# Documentation processor settings
+documentation:
+  languages: ["en"]  # Languages to generate documentation for
+  include_diagrams: true  # Include diagrams in documentation
+  
+# Evaluation processor settings  
+evaluation:
+  oops_url: "http://oops.linkeddata.es/rest"  # OOPS! service URL
+  timeout: 30  # Request timeout in seconds
+  
+# Diagram processor settings
+diagrams:
+  format: "png"  # Output format: png, svg, pdf
+  include_properties: true  # Include properties in diagrams
+  max_nodes: 50  # Maximum nodes to display for readability
+  
+# JSON-LD processor settings
+jsonld:
+  include_standard_prefixes: true  # Include common RDF prefixes
+  
+# Validation processor settings
+validation:
+  check_consistency: true  # Perform consistency checks
+  check_completeness: true  # Perform completeness checks

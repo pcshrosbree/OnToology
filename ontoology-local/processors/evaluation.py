@@ -23,7 +23,7 @@ class EvaluationProcessor:
         self.config = config
         self.logger = logger
         self.oops_url = config.get('oops_url', 'http://oops.linkeddata.es/rest')
-        self.timeout = config.get('timeout', 30)
+        self.timeout = config.get('timeout', 10)
         
     def process(self, ontology_data: Dict[str, Any], base_name: str, 
                 output_dir: str) -> Dict[str, Any]:
@@ -80,31 +80,47 @@ class EvaluationProcessor:
             }
             
             # Make request to OOPS!
+            self.logger.debug(f"Sending request to OOPS! service: {self.oops_url}")
             response = requests.post(
                 self.oops_url,
                 data=data,
-                timeout=self.timeout
+                timeout=self.timeout,
+                headers={'Content-Type': 'application/x-www-form-urlencoded'}
             )
             
+            self.logger.debug(f"OOPS! response status: {response.status_code}")
+            self.logger.debug(f"OOPS! response content length: {len(response.text)}")
+            
             if response.status_code == 200:
-                return response.json()
+                # Check if response has content
+                if not response.text.strip():
+                    self.logger.warning("OOPS! service returned empty response")
+                    return self._create_fallback_evaluation("Empty response from OOPS! service")
+                
+                try:
+                    return response.json()
+                except ValueError as json_error:
+                    self.logger.warning(f"OOPS! service returned invalid JSON: {json_error}")
+                    self.logger.debug(f"Response content: {response.text[:500]}...")
+                    return self._create_fallback_evaluation("Invalid JSON response from OOPS! service")
             else:
-                self.logger.warning(f"OOPS! service returned status {response.status_code}")
-                return self._create_fallback_evaluation()
+                self.logger.warning(f"OOPS! service returned status {response.status_code}: {response.text[:200]}")
+                return self._create_fallback_evaluation(f"OOPS! service error (HTTP {response.status_code})")
                 
         except requests.RequestException as e:
             self.logger.warning(f"Could not connect to OOPS! service: {str(e)}")
-            return self._create_fallback_evaluation()
+            return self._create_fallback_evaluation(f"Connection error: {str(e)}")
         except Exception as e:
             self.logger.warning(f"Error during OOPS! evaluation: {str(e)}")
-            return self._create_fallback_evaluation()
+            return self._create_fallback_evaluation(f"Evaluation error: {str(e)}")
     
-    def _create_fallback_evaluation(self) -> Dict[str, Any]:
+    def _create_fallback_evaluation(self, error_msg: str = None) -> Dict[str, Any]:
         """Create a fallback evaluation when OOPS! is not available."""
+        warning_msg = error_msg or 'OOPS! service was not available during evaluation'
         return {
             'pitfalls': [],
             'suggestions': [],
-            'warnings': ['OOPS! service was not available during evaluation'],
+            'warnings': [warning_msg],
             'summary': {
                 'total_pitfalls': 0,
                 'critical_pitfalls': 0,

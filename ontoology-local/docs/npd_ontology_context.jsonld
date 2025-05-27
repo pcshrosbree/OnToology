@@ -1,0 +1,5617 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "brick": "https://brickschema.org/schema/Brick#",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcmitype": "http://purl.org/dc/dcmitype/",
+    "dcam": "http://purl.org/dc/dcam/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "org": "http://www.w3.org/ns/org#",
+    "prof": "http://www.w3.org/ns/dx/prof/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "qb": "http://purl.org/linked-data/cube#",
+    "schema": "https://schema.org/",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "time": "http://www.w3.org/2006/time#",
+    "vann": "http://purl.org/vocab/vann/",
+    "void": "http://rdfs.org/ns/void#",
+    "wgs": "https://www.w3.org/2003/01/geo/wgs84_pos#",
+    "xml": "http://www.w3.org/XML/1998/namespace",
+    "sql": "http://sws.ifi.uio.no/vocab/sql#",
+    "nlxv": "http://sws.ifi.uio.no/vocab/norlex#",
+    "gtrs-30": "http://resource.geosciml.org/ontology/timescale/gtrs-30#",
+    "trs-30": "http://resource.geosciml.org/ontology/trs-30#",
+    "temporal": "http://def.seegrid.csiro.au/isotc211/iso19108/2006/temporal#",
+    "diskos": "http://sws.ifi.uio.no/data/diskos/",
+    "npd": "http://sws.ifi.uio.no/data/npd-v2/",
+    "sampling": "http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling#",
+    "ptl": "http://sws.ifi.uio.no/vocab/npd-v2-ptl#",
+    "ex": "http://example.org/ex#",
+    "diskosv": "http://sws.ifi.uio.no/vocab/diskos#",
+    "isc": "http://resource.geosciml.org/classifier/ics/ischart/",
+    "geometry": "http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#",
+    "nlx": "http://sws.ifi.uio.no/data/norlex/",
+    "basic": "http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#",
+    "gts-30": "http://resource.geosciml.org/ontology/timescale/gts-30#",
+    "vocab": "http://sws.ifi.uio.no/vocab/npd-v2",
+    "AbandonedWell": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#AbandonedWell",
+      "@type": "@id"
+    },
+    "AbstractCurveSegment": {
+      "@id": "http://www.opengis.net/ont/gml#AbstractCurveSegment",
+      "@type": "@id"
+    },
+    "AbstractGeometricPrimitive": {
+      "@id": "http://www.opengis.net/ont/gml#AbstractGeometricPrimitive",
+      "@type": "@id"
+    },
+    "AbstractGeometry": {
+      "@id": "http://www.opengis.net/ont/gml#AbstractGeometry",
+      "@type": "@id"
+    },
+    "AbstractGriddedSurface": {
+      "@id": "http://www.opengis.net/ont/gml#AbstractGriddedSurface",
+      "@type": "@id"
+    },
+    "AbstractParametricCurveSurface": {
+      "@id": "http://www.opengis.net/ont/gml#AbstractParametricCurveSurface",
+      "@type": "@id"
+    },
+    "AbstractSurfacePatch": {
+      "@id": "http://www.opengis.net/ont/gml#AbstractSurfacePatch",
+      "@type": "@id"
+    },
+    "Agent": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Agent",
+      "@type": "@id"
+    },
+    "AppraisalWell": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#AppraisalWell",
+      "@type": "@id"
+    },
+    "AppraisalWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#AppraisalWellbore",
+      "@type": "@id"
+    },
+    "Arc": {
+      "@id": "http://www.opengis.net/ont/gml#Arc",
+      "@type": "@id"
+    },
+    "ArcString": {
+      "@id": "http://www.opengis.net/ont/gml#ArcString",
+      "@type": "@id"
+    },
+    "ArcStringByBulge": {
+      "@id": "http://www.opengis.net/ont/gml#ArcStringByBulge",
+      "@type": "@id"
+    },
+    "ArcByBulge": {
+      "@id": "http://www.opengis.net/ont/gml#ArcByBulge",
+      "@type": "@id"
+    },
+    "ArcByCenterPoint": {
+      "@id": "http://www.opengis.net/ont/gml#ArcByCenterPoint",
+      "@type": "@id"
+    },
+    "Area": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Area",
+      "@type": "@id"
+    },
+    "AreaFee": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#AreaFee",
+      "@type": "@id"
+    },
+    "AssociatedGas": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#AssociatedGas",
+      "@type": "@id"
+    },
+    "Award": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Award",
+      "@type": "@id"
+    },
+    "AwardArea": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#AwardArea",
+      "@type": "@id"
+    },
+    "BAA": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#BAA",
+      "@type": "@id"
+    },
+    "BAAArea": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#BAAArea",
+      "@type": "@id"
+    },
+    "BAALicensee": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#BAALicensee",
+      "@type": "@id"
+    },
+    "BAATransfer": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#BAATransfer",
+      "@type": "@id"
+    },
+    "BSpline": {
+      "@id": "http://www.opengis.net/ont/gml#BSpline",
+      "@type": "@id"
+    },
+    "Bezler": {
+      "@id": "http://www.opengis.net/ont/gml#Bezler",
+      "@type": "@id"
+    },
+    "Block": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Block",
+      "@type": "@id"
+    },
+    "BlowOut": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#BlowOut",
+      "@type": "@id"
+    },
+    "BlowoutWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#BlowoutWellbore",
+      "@type": "@id"
+    },
+    "ChangeOfCompanyNameTransfer": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ChangeOfCompanyNameTransfer",
+      "@type": "@id"
+    },
+    "ChangedAwardNotification": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2-ptl#ChangedAwardNotification",
+      "@type": "@id"
+    },
+    "Circle": {
+      "@id": "http://www.opengis.net/ont/gml#Circle",
+      "@type": "@id"
+    },
+    "CircleByCenterPoint": {
+      "@id": "http://www.opengis.net/ont/gml#CircleByCenterPoint",
+      "@type": "@id"
+    },
+    "Clothoid": {
+      "@id": "http://www.opengis.net/ont/gml#Clothoid",
+      "@type": "@id"
+    },
+    "Collection": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Collection",
+      "@type": "@id"
+    },
+    "CommercialDiscovery": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#CommercialDiscovery",
+      "@type": "@id"
+    },
+    "Company": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Company",
+      "@type": "@id"
+    },
+    "CompanyReserve": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#CompanyReserve",
+      "@type": "@id"
+    },
+    "Composite": {
+      "@id": "http://www.opengis.net/ont/gml#Composite",
+      "@type": "@id"
+    },
+    "CompositeCurve": {
+      "@id": "http://www.opengis.net/ont/gml#CompositeCurve",
+      "@type": "@id"
+    },
+    "CompositeSolid": {
+      "@id": "http://www.opengis.net/ont/gml#CompositeSolid",
+      "@type": "@id"
+    },
+    "CompositeSurface": {
+      "@id": "http://www.opengis.net/ont/gml#CompositeSurface",
+      "@type": "@id"
+    },
+    "CompressedNaturalGas": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#CompressedNaturalGas",
+      "@type": "@id"
+    },
+    "Concept": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "@id"
+    },
+    "ConceptScheme": {
+      "@id": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+      "@type": "@id"
+    },
+    "ConcreteStructureFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ConcreteStructureFacility",
+      "@type": "@id"
+    },
+    "Condeep3ShaftsFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Condeep3ShaftsFacility",
+      "@type": "@id"
+    },
+    "Condeep4ShaftsFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Condeep4ShaftsFacility",
+      "@type": "@id"
+    },
+    "CondeepMonoshaftFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#CondeepMonoshaftFacility",
+      "@type": "@id"
+    },
+    "Condensate": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Condensate",
+      "@type": "@id"
+    },
+    "CondensatePipeline": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#CondensatePipeline",
+      "@type": "@id"
+    },
+    "Cone": {
+      "@id": "http://www.opengis.net/ont/gml#Cone",
+      "@type": "@id"
+    },
+    "ContingentResources": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ContingentResources",
+      "@type": "@id"
+    },
+    "Coordinate": {
+      "@id": "http://def.seegrid.csiro.au/isotc211/iso19108/2006/temporal#Coordinate",
+      "@type": "@id"
+    },
+    "CrudeOil": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#CrudeOil",
+      "@type": "@id"
+    },
+    "CubicSpline": {
+      "@id": "http://www.opengis.net/ont/gml#CubicSpline",
+      "@type": "@id"
+    },
+    "Curve": {
+      "@id": "http://www.opengis.net/ont/gml#Curve",
+      "@type": "@id"
+    },
+    "Cylinder": {
+      "@id": "http://www.opengis.net/ont/gml#Cylinder",
+      "@type": "@id"
+    },
+    "DeletedEasementNotification": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2-ptl#DeletedEasementNotification",
+      "@type": "@id"
+    },
+    "DevelopmentWell": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#DevelopmentWell",
+      "@type": "@id"
+    },
+    "DevelopmentWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#DevelopmentWellbore",
+      "@type": "@id"
+    },
+    "Discovery": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Discovery",
+      "@type": "@id"
+    },
+    "DiscoveryArea": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#DiscoveryArea",
+      "@type": "@id"
+    },
+    "DiscoveryReserve": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#DiscoveryReserve",
+      "@type": "@id"
+    },
+    "DiscoveryWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#DiscoveryWellbore",
+      "@type": "@id"
+    },
+    "DorisFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#DorisFacility",
+      "@type": "@id"
+    },
+    "DryGas": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#DryGas",
+      "@type": "@id"
+    },
+    "EasementNotification": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2-ptl#EasementNotification",
+      "@type": "@id"
+    },
+    "ElectromagneticSurvey": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ElectromagneticSurvey",
+      "@type": "@id"
+    },
+    "Equipment": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Equipment",
+      "@type": "@id"
+    },
+    "ExplorationWell": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ExplorationWell",
+      "@type": "@id"
+    },
+    "ExplorationWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ExplorationWellbore",
+      "@type": "@id"
+    },
+    "FPSOFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#FPSOFacility",
+      "@type": "@id"
+    },
+    "FSUFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#FSUFacility",
+      "@type": "@id"
+    },
+    "Facility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Facility",
+      "@type": "@id"
+    },
+    "FacilityPoint": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#FacilityPoint",
+      "@type": "@id"
+    },
+    "Feature": {
+      "@id": "http://www.opengis.net/ont/geosparql#Feature",
+      "@type": "@id"
+    },
+    "FeederPipeline": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#FeederPipeline",
+      "@type": "@id"
+    },
+    "Field": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Field",
+      "@type": "@id"
+    },
+    "FieldArea": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#FieldArea",
+      "@type": "@id"
+    },
+    "FieldInvestment": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#FieldInvestment",
+      "@type": "@id"
+    },
+    "FieldLicensee": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#FieldLicensee",
+      "@type": "@id"
+    },
+    "FieldMonthlyProduction": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#FieldMonthlyProduction",
+      "@type": "@id"
+    },
+    "FieldOperator": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#FieldOperator",
+      "@type": "@id"
+    },
+    "FieldOwner": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#FieldOwner",
+      "@type": "@id"
+    },
+    "FieldReserve": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#FieldReserve",
+      "@type": "@id"
+    },
+    "FieldStatus": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#FieldStatus",
+      "@type": "@id"
+    },
+    "FieldYearlyProduction": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#FieldYearlyProduction",
+      "@type": "@id"
+    },
+    "FixedFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#FixedFacility",
+      "@type": "@id"
+    },
+    "Formation": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Formation",
+      "@type": "@id"
+    },
+    "Gas": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Gas",
+      "@type": "@id"
+    },
+    "GasPipeline": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#GasPipeline",
+      "@type": "@id"
+    },
+    "GeochronologicBoundary": {
+      "@id": "http://resource.geosciml.org/ontology/timescale/gts-30#GeochronologicBoundary",
+      "@type": "@id"
+    },
+    "GeochronologicEra": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GeochronologicEra",
+      "@type": "@id"
+    },
+    "Geodesic": {
+      "@id": "http://www.opengis.net/ont/gml#Geodesic",
+      "@type": "@id"
+    },
+    "GeodesicString": {
+      "@id": "http://www.opengis.net/ont/gml#GeodesicString",
+      "@type": "@id"
+    },
+    "GeologicTimescale": {
+      "@id": "http://resource.geosciml.org/ontology/timescale/gts-30#GeologicTimescale",
+      "@type": "@id"
+    },
+    "GeometricComplex": {
+      "@id": "http://www.opengis.net/ont/gml#GeometricComplex",
+      "@type": "@id"
+    },
+    "Geometry": {
+      "@id": "http://www.opengis.net/ont/geosparql#Geometry",
+      "@type": "@id"
+    },
+    "GeometryCollection": {
+      "@id": "http://www.opengis.net/ont/sf#GeometryCollection",
+      "@type": "@id"
+    },
+    "GlobalStratotypePoint": {
+      "@id": "http://resource.geosciml.org/ontology/timescale/gts-30#GlobalStratotypePoint",
+      "@type": "@id"
+    },
+    "GroundSurvey": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#GroundSurvey",
+      "@type": "@id"
+    },
+    "Group": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Group",
+      "@type": "@id"
+    },
+    "InitialWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#InitialWellbore",
+      "@type": "@id"
+    },
+    "InjectionWell": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#InjectionWell",
+      "@type": "@id"
+    },
+    "InjectionWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#InjectionWellbore",
+      "@type": "@id"
+    },
+    "JackUp3LegsFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#JackUp3LegsFacility",
+      "@type": "@id"
+    },
+    "JackUp4LegsFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#JackUp4LegsFacility",
+      "@type": "@id"
+    },
+    "Jacket12LegsFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Jacket12LegsFacility",
+      "@type": "@id"
+    },
+    "Jacket4LegsFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Jacket4LegsFacility",
+      "@type": "@id"
+    },
+    "Jacket6LegsFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Jacket6LegsFacility",
+      "@type": "@id"
+    },
+    "Jacket8LegsFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Jacket8LegsFacility",
+      "@type": "@id"
+    },
+    "JacketTripodFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#JacketTripodFacility",
+      "@type": "@id"
+    },
+    "JunkedWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#JunkedWellbore",
+      "@type": "@id"
+    },
+    "Kick": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Kick",
+      "@type": "@id"
+    },
+    "KickOffPoint": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#KickOffPoint",
+      "@type": "@id"
+    },
+    "LandfallFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#LandfallFacility",
+      "@type": "@id"
+    },
+    "LicencedAcreage": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#LicencedAcreage",
+      "@type": "@id"
+    },
+    "Licensee": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Licensee",
+      "@type": "@id"
+    },
+    "Line": {
+      "@id": "http://www.opengis.net/ont/sf#Line",
+      "@type": "@id"
+    },
+    "LineString": {
+      "@id": "http://www.opengis.net/ont/gml#LineString",
+      "@type": "@id"
+    },
+    "LineStringSegment": {
+      "@id": "http://www.opengis.net/ont/gml#LineStringSegment",
+      "@type": "@id"
+    },
+    "LinearRing": {
+      "@id": "http://www.opengis.net/ont/gml#LinearRing",
+      "@type": "@id"
+    },
+    "LiquefiedNaturalGas": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#LiquefiedNaturalGas",
+      "@type": "@id"
+    },
+    "LiquefiedPetroleumGas": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#LiquefiedPetroleumGas",
+      "@type": "@id"
+    },
+    "LithostratigraphicUnit": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#LithostratigraphicUnit",
+      "@type": "@id"
+    },
+    "LoadingSystemFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#LoadingSystemFacility",
+      "@type": "@id"
+    },
+    "MainArea": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#MainArea",
+      "@type": "@id"
+    },
+    "Measure": {
+      "@id": "http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#Measure",
+      "@type": "@id"
+    },
+    "Member": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Member",
+      "@type": "@id"
+    },
+    "MergerTakeoverTransfer": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#MergerTakeoverTransfer",
+      "@type": "@id"
+    },
+    "MonotowerFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#MonotowerFacility",
+      "@type": "@id"
+    },
+    "MopustorFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#MopustorFacility",
+      "@type": "@id"
+    },
+    "MoveableFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#MoveableFacility",
+      "@type": "@id"
+    },
+    "MultiCurve": {
+      "@id": "http://www.opengis.net/ont/sf#MultiCurve",
+      "@type": "@id"
+    },
+    "MultiLineString": {
+      "@id": "http://www.opengis.net/ont/sf#MultiLineString",
+      "@type": "@id"
+    },
+    "MultiPoint": {
+      "@id": "http://www.opengis.net/ont/sf#MultiPoint",
+      "@type": "@id"
+    },
+    "MultiPolygon": {
+      "@id": "http://www.opengis.net/ont/sf#MultiPolygon",
+      "@type": "@id"
+    },
+    "MultiSurface": {
+      "@id": "http://www.opengis.net/ont/sf#MultiSurface",
+      "@type": "@id"
+    },
+    "MultiGeometry": {
+      "@id": "http://www.opengis.net/ont/gml#MultiGeometry",
+      "@type": "@id"
+    },
+    "MultiSolid": {
+      "@id": "http://www.opengis.net/ont/gml#MultiSolid",
+      "@type": "@id"
+    },
+    "MultiFieldWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#MultiFieldWellbore",
+      "@type": "@id"
+    },
+    "MultiWellTemplateFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#MultiWellTemplateFacility",
+      "@type": "@id"
+    },
+    "MultibranchWell": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#MultibranchWell",
+      "@type": "@id"
+    },
+    "MultifieldWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#MultifieldWellbore",
+      "@type": "@id"
+    },
+    "MultilateralWell": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#MultilateralWell",
+      "@type": "@id"
+    },
+    "MultilateralWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#MultilateralWellbore",
+      "@type": "@id"
+    },
+    "MultipurposeWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#MultipurposeWellbore",
+      "@type": "@id"
+    },
+    "NCSMonthlyProduction": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#NCSMonthlyProduction",
+      "@type": "@id"
+    },
+    "NCSYearlyProduction": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#NCSYearlyProduction",
+      "@type": "@id"
+    },
+    "NaturalGasLiquid": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#NaturalGasLiquid",
+      "@type": "@id"
+    },
+    "NewAwardNotification": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2-ptl#NewAwardNotification",
+      "@type": "@id"
+    },
+    "Notification": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2-ptl#Notification",
+      "@type": "@id"
+    },
+    "Object": {
+      "@id": "http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Object",
+      "@type": "@id"
+    },
+    "ObservationWell": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ObservationWell",
+      "@type": "@id"
+    },
+    "ObservationWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ObservationWellbore",
+      "@type": "@id"
+    },
+    "OffsetCurve": {
+      "@id": "http://www.opengis.net/ont/gml#OffsetCurve",
+      "@type": "@id"
+    },
+    "Oil": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Oil",
+      "@type": "@id"
+    },
+    "OilEquivalents": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#OilEquivalents",
+      "@type": "@id"
+    },
+    "OilGasPipeline": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#OilGasPipeline",
+      "@type": "@id"
+    },
+    "OilPipeline": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#OilPipeline",
+      "@type": "@id"
+    },
+    "OnshoreFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#OnshoreFacility",
+      "@type": "@id"
+    },
+    "Operator": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Operator",
+      "@type": "@id"
+    },
+    "OrderedCollection": {
+      "@id": "http://www.w3.org/2004/02/skos/core#OrderedCollection",
+      "@type": "@id"
+    },
+    "OrientableCurve": {
+      "@id": "http://www.opengis.net/ont/gml#OrientableCurve",
+      "@type": "@id"
+    },
+    "OrientableSurface": {
+      "@id": "http://www.opengis.net/ont/gml#OrientableSurface",
+      "@type": "@id"
+    },
+    "OtherSurvey": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#OtherSurvey",
+      "@type": "@id"
+    },
+    "Owner": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Owner",
+      "@type": "@id"
+    },
+    "PAWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#PAWellbore",
+      "@type": "@id"
+    },
+    "ParcellBAA": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ParcellBAA",
+      "@type": "@id"
+    },
+    "Petroleum": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Petroleum",
+      "@type": "@id"
+    },
+    "PetroleumActivity": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#PetroleumActivity",
+      "@type": "@id"
+    },
+    "PetroleumDeposit": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#PetroleumDeposit",
+      "@type": "@id"
+    },
+    "Pipeline": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Pipeline",
+      "@type": "@id"
+    },
+    "Plan": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Plan",
+      "@type": "@id"
+    },
+    "PlanForDevelopmentAndOperationOfPetroleumDeposits": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#PlanForDevelopmentAndOperationOfPetroleumDeposits",
+      "@type": "@id"
+    },
+    "PlanForInstallationAndOperation": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#PlanForInstallationAndOperation",
+      "@type": "@id"
+    },
+    "Play": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Play",
+      "@type": "@id"
+    },
+    "Point": {
+      "@id": "http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Point",
+      "@type": "@id"
+    },
+    "Polygon": {
+      "@id": "http://www.opengis.net/ont/gml#Polygon",
+      "@type": "@id"
+    },
+    "PolygonPatch": {
+      "@id": "http://www.opengis.net/ont/gml#PolygonPatch",
+      "@type": "@id"
+    },
+    "PolyhedralSurface": {
+      "@id": "http://www.opengis.net/ont/gml#PolyhedralSurface",
+      "@type": "@id"
+    },
+    "PolynomialSpline": {
+      "@id": "http://www.opengis.net/ont/gml#PolynomialSpline",
+      "@type": "@id"
+    },
+    "Position": {
+      "@id": "http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Position",
+      "@type": "@id"
+    },
+    "ProductionLicence": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ProductionLicence",
+      "@type": "@id"
+    },
+    "ProductionLicenceArea": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ProductionLicenceArea",
+      "@type": "@id"
+    },
+    "ProductionLicenceAreaPerBlock": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ProductionLicenceAreaPerBlock",
+      "@type": "@id"
+    },
+    "ProductionLicenceLicensee": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ProductionLicenceLicensee",
+      "@type": "@id"
+    },
+    "ProductionLicenceNotification": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2-ptl#ProductionLicenceNotification",
+      "@type": "@id"
+    },
+    "ProductionLicenceOperator": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ProductionLicenceOperator",
+      "@type": "@id"
+    },
+    "ProductionLicenceStatus": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ProductionLicenceStatus",
+      "@type": "@id"
+    },
+    "ProductionLicenceTransfer": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ProductionLicenceTransfer",
+      "@type": "@id"
+    },
+    "ProductionLicenceWorkObligation": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ProductionLicenceWorkObligation",
+      "@type": "@id"
+    },
+    "ProductionWell": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ProductionWell",
+      "@type": "@id"
+    },
+    "ProductionWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ProductionWellbore",
+      "@type": "@id"
+    },
+    "Prospect": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Prospect",
+      "@type": "@id"
+    },
+    "Quadrant": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Quadrant",
+      "@type": "@id"
+    },
+    "ReClassToDevWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ReClassToDevWellbore",
+      "@type": "@id"
+    },
+    "ReClassToTestWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ReClassToTestWellbore",
+      "@type": "@id"
+    },
+    "ReEntryWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ReEntryWellbore",
+      "@type": "@id"
+    },
+    "Recovery": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Recovery",
+      "@type": "@id"
+    },
+    "RecoveryWell": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#RecoveryWell",
+      "@type": "@id"
+    },
+    "Rectangle": {
+      "@id": "http://www.opengis.net/ont/gml#Rectangle",
+      "@type": "@id"
+    },
+    "Refining": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Refining",
+      "@type": "@id"
+    },
+    "RegularSeismicSurvey": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#RegularSeismicSurvey",
+      "@type": "@id"
+    },
+    "Reserve": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Reserve",
+      "@type": "@id"
+    },
+    "RichGas": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#RichGas",
+      "@type": "@id"
+    },
+    "Rig": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Rig",
+      "@type": "@id"
+    },
+    "Ring": {
+      "@id": "http://www.opengis.net/ont/gml#Ring",
+      "@type": "@id"
+    },
+    "Riser": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Riser",
+      "@type": "@id"
+    },
+    "RouteSurvey": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#RouteSurvey",
+      "@type": "@id"
+    },
+    "Royalty": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Royalty",
+      "@type": "@id"
+    },
+    "SDFITransfer": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#SDFITransfer",
+      "@type": "@id"
+    },
+    "SeabedSeismicSurvey": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#SeabedSeismicSurvey",
+      "@type": "@id"
+    },
+    "SeismicAreaBAA": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#SeismicAreaBAA",
+      "@type": "@id"
+    },
+    "SeismicSurvey": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#SeismicSurvey",
+      "@type": "@id"
+    },
+    "SeismicSurveyCoordinate": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#SeismicSurveyCoordinate",
+      "@type": "@id"
+    },
+    "SeismicSurveyProgress": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#SeismicSurveyProgress",
+      "@type": "@id"
+    },
+    "SemisubConcreteFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#SemisubConcreteFacility",
+      "@type": "@id"
+    },
+    "SemisubSteelFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#SemisubSteelFacility",
+      "@type": "@id"
+    },
+    "ShallowWell": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ShallowWell",
+      "@type": "@id"
+    },
+    "ShallowWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ShallowWellbore",
+      "@type": "@id"
+    },
+    "Shell": {
+      "@id": "http://www.opengis.net/ont/gml#Shell",
+      "@type": "@id"
+    },
+    "Sidetrack": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Sidetrack",
+      "@type": "@id"
+    },
+    "SidetrackWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#SidetrackWellbore",
+      "@type": "@id"
+    },
+    "SingleWellTemplateFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#SingleWellTemplateFacility",
+      "@type": "@id"
+    },
+    "SiteSurvey": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#SiteSurvey",
+      "@type": "@id"
+    },
+    "SlidingScaleBAA": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#SlidingScaleBAA",
+      "@type": "@id"
+    },
+    "Solid": {
+      "@id": "http://www.opengis.net/ont/gml#Solid",
+      "@type": "@id"
+    },
+    "SpatialObject": {
+      "@id": "http://www.opengis.net/ont/geosparql#SpatialObject",
+      "@type": "@id"
+    },
+    "Sphere": {
+      "@id": "http://www.opengis.net/ont/gml#Sphere",
+      "@type": "@id"
+    },
+    "SplineCurve": {
+      "@id": "http://www.opengis.net/ont/gml#SplineCurve",
+      "@type": "@id"
+    },
+    "StandardGlobalNumericalAge": {
+      "@id": "http://resource.geosciml.org/ontology/timescale/gts-30#StandardGlobalNumericalAge",
+      "@type": "@id"
+    },
+    "SubseaCompletedWell": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#SubseaCompletedWell",
+      "@type": "@id"
+    },
+    "SubseaStructureFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#SubseaStructureFacility",
+      "@type": "@id"
+    },
+    "Surface": {
+      "@id": "http://www.opengis.net/ont/gml#Surface",
+      "@type": "@id"
+    },
+    "Survey": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Survey",
+      "@type": "@id"
+    },
+    "SurveyArea": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#SurveyArea",
+      "@type": "@id"
+    },
+    "SurveyMultilineArea": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#SurveyMultilineArea",
+      "@type": "@id"
+    },
+    "SuspReenteredLaterWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#SuspReenteredLaterWellbore",
+      "@type": "@id"
+    },
+    "SuspendedWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#SuspendedWellbore",
+      "@type": "@id"
+    },
+    "TUFLicensee": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2-ptl#TUFLicensee",
+      "@type": "@id"
+    },
+    "TUFNotification": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2-ptl#TUFNotification",
+      "@type": "@id"
+    },
+    "TUFOperator": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#TUFOperator",
+      "@type": "@id"
+    },
+    "TUFOwner": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#TUFOwner",
+      "@type": "@id"
+    },
+    "TUFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#TUFacility",
+      "@type": "@id"
+    },
+    "TechnicalDiscovery": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#TechnicalDiscovery",
+      "@type": "@id"
+    },
+    "TechnicalSideTrack": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#TechnicalSideTrack",
+      "@type": "@id"
+    },
+    "TerminationPlan": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#TerminationPlan",
+      "@type": "@id"
+    },
+    "TerminationPoint": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#TerminationPoint",
+      "@type": "@id"
+    },
+    "TestProductionWell": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#TestProductionWell",
+      "@type": "@id"
+    },
+    "Time": {
+      "@id": "http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#Time",
+      "@type": "@id"
+    },
+    "TimeOrdinalEraBoundary": {
+      "@id": "http://resource.geosciml.org/ontology/timescale/gtrs-30#TimeOrdinalEraBoundary",
+      "@type": "@id"
+    },
+    "TimeOrdinalReferenceSystem": {
+      "@id": "http://resource.geosciml.org/ontology/trs-30#TimeOrdinalReferenceSystem",
+      "@type": "@id"
+    },
+    "TlpConcreteFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#TlpConcreteFacility",
+      "@type": "@id"
+    },
+    "TlpSteelFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#TlpSteelFacility",
+      "@type": "@id"
+    },
+    "Transfer": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Transfer",
+      "@type": "@id"
+    },
+    "TransportationPipeline": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#TransportationPipeline",
+      "@type": "@id"
+    },
+    "Triangle": {
+      "@id": "http://www.opengis.net/ont/gml#Triangle",
+      "@type": "@id"
+    },
+    "Tin": {
+      "@id": "http://www.opengis.net/ont/gml#Tin",
+      "@type": "@id"
+    },
+    "TIN": {
+      "@id": "http://www.opengis.net/ont/sf#TIN",
+      "@type": "@id"
+    },
+    "TriangulatedSurface": {
+      "@id": "http://www.opengis.net/ont/gml#TriangulatedSurface",
+      "@type": "@id"
+    },
+    "UnitizedBAA": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#UnitizedBAA",
+      "@type": "@id"
+    },
+    "VesselFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#VesselFacility",
+      "@type": "@id"
+    },
+    "Well": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Well",
+      "@type": "@id"
+    },
+    "WellHead": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#WellHead",
+      "@type": "@id"
+    },
+    "WellTarget": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#WellTarget",
+      "@type": "@id"
+    },
+    "WellTrack": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#WellTrack",
+      "@type": "@id"
+    },
+    "Wellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#Wellbore",
+      "@type": "@id"
+    },
+    "WellboreCasingAndLeakoffTest": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#WellboreCasingAndLeakoffTest",
+      "@type": "@id"
+    },
+    "WellboreCoordinate": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#WellboreCoordinate",
+      "@type": "@id"
+    },
+    "WellboreCore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#WellboreCore",
+      "@type": "@id"
+    },
+    "WellboreCorePhoto": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#WellboreCorePhoto",
+      "@type": "@id"
+    },
+    "WellboreCoreSet": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#WellboreCoreSet",
+      "@type": "@id"
+    },
+    "WellboreDocument": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#WellboreDocument",
+      "@type": "@id"
+    },
+    "WellboreDrillStemTest": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#WellboreDrillStemTest",
+      "@type": "@id"
+    },
+    "WellboreDrillingMudSample": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#WellboreDrillingMudSample",
+      "@type": "@id"
+    },
+    "WellboreOilSample": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#WellboreOilSample",
+      "@type": "@id"
+    },
+    "WellborePoint": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#WellborePoint",
+      "@type": "@id"
+    },
+    "WellboreStratigraphicCoreSet": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#WellboreStratigraphicCoreSet",
+      "@type": "@id"
+    },
+    "WellboreStratum": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#WellboreStratum",
+      "@type": "@id"
+    },
+    "WetGas": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#WetGas",
+      "@type": "@id"
+    },
+    "WildcatWell": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#WildcatWell",
+      "@type": "@id"
+    },
+    "WildcatWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#WildcatWellbore",
+      "@type": "@id"
+    },
+    "ConnectedSpatiotemporalRegion": {
+      "@id": "http://www.ifomis.org/bfo/1.1/span#ConnectedSpatiotemporalRegion",
+      "@type": "@id"
+    },
+    "ConnectedTemporalRegion": {
+      "@id": "http://www.ifomis.org/bfo/1.1/span#ConnectedTemporalRegion",
+      "@type": "@id"
+    },
+    "Continuant": {
+      "@id": "http://www.ifomis.org/bfo/1.1/snap#Continuant",
+      "@type": "@id"
+    },
+    "DependentContinuant": {
+      "@id": "http://www.ifomis.org/bfo/1.1/snap#DependentContinuant",
+      "@type": "@id"
+    },
+    "Disposition": {
+      "@id": "http://www.ifomis.org/bfo/1.1/snap#Disposition",
+      "@type": "@id"
+    },
+    "Entity": {
+      "@id": "http://www.ifomis.org/bfo/1.1#Entity",
+      "@type": "@id"
+    },
+    "FiatObjectPart": {
+      "@id": "http://www.ifomis.org/bfo/1.1/snap#FiatObjectPart",
+      "@type": "@id"
+    },
+    "FiatProcessPart": {
+      "@id": "http://www.ifomis.org/bfo/1.1/span#FiatProcessPart",
+      "@type": "@id"
+    },
+    "Function": {
+      "@id": "http://www.ifomis.org/bfo/1.1/snap#Function",
+      "@type": "@id"
+    },
+    "GenericallyDependentContinuant": {
+      "@id": "http://www.ifomis.org/bfo/1.1/snap#GenericallyDependentContinuant",
+      "@type": "@id"
+    },
+    "IndependentContinuant": {
+      "@id": "http://www.ifomis.org/bfo/1.1/snap#IndependentContinuant",
+      "@type": "@id"
+    },
+    "MaterialEntity": {
+      "@id": "http://www.ifomis.org/bfo/1.1/snap#MaterialEntity",
+      "@type": "@id"
+    },
+    "ObjectAggregate": {
+      "@id": "http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate",
+      "@type": "@id"
+    },
+    "ObjectBoundary": {
+      "@id": "http://www.ifomis.org/bfo/1.1/snap#ObjectBoundary",
+      "@type": "@id"
+    },
+    "Occurrent": {
+      "@id": "http://www.ifomis.org/bfo/1.1/span#Occurrent",
+      "@type": "@id"
+    },
+    "OneDimensionalRegion": {
+      "@id": "http://www.ifomis.org/bfo/1.1/snap#OneDimensionalRegion",
+      "@type": "@id"
+    },
+    "Process": {
+      "@id": "http://www.ifomis.org/bfo/1.1/span#Process",
+      "@type": "@id"
+    },
+    "ProcessAggregate": {
+      "@id": "http://www.ifomis.org/bfo/1.1/span#ProcessAggregate",
+      "@type": "@id"
+    },
+    "ProcessBoundary": {
+      "@id": "http://www.ifomis.org/bfo/1.1/span#ProcessBoundary",
+      "@type": "@id"
+    },
+    "ProcessualContext": {
+      "@id": "http://www.ifomis.org/bfo/1.1/span#ProcessualContext",
+      "@type": "@id"
+    },
+    "ProcessualEntity": {
+      "@id": "http://www.ifomis.org/bfo/1.1/span#ProcessualEntity",
+      "@type": "@id"
+    },
+    "Quality": {
+      "@id": "http://www.ifomis.org/bfo/1.1/snap#Quality",
+      "@type": "@id"
+    },
+    "RealizableEntity": {
+      "@id": "http://www.ifomis.org/bfo/1.1/snap#RealizableEntity",
+      "@type": "@id"
+    },
+    "Role": {
+      "@id": "http://www.ifomis.org/bfo/1.1/snap#Role",
+      "@type": "@id"
+    },
+    "ScatteredSpatiotemporalRegion": {
+      "@id": "http://www.ifomis.org/bfo/1.1/span#ScatteredSpatiotemporalRegion",
+      "@type": "@id"
+    },
+    "ScatteredTemporalRegion": {
+      "@id": "http://www.ifomis.org/bfo/1.1/span#ScatteredTemporalRegion",
+      "@type": "@id"
+    },
+    "Site": {
+      "@id": "http://www.ifomis.org/bfo/1.1/snap#Site",
+      "@type": "@id"
+    },
+    "SpatialRegion": {
+      "@id": "http://www.ifomis.org/bfo/1.1/snap#SpatialRegion",
+      "@type": "@id"
+    },
+    "SpatiotemporalInstant": {
+      "@id": "http://www.ifomis.org/bfo/1.1/span#SpatiotemporalInstant",
+      "@type": "@id"
+    },
+    "SpatiotemporalInterval": {
+      "@id": "http://www.ifomis.org/bfo/1.1/span#SpatiotemporalInterval",
+      "@type": "@id"
+    },
+    "SpatiotemporalRegion": {
+      "@id": "http://www.ifomis.org/bfo/1.1/span#SpatiotemporalRegion",
+      "@type": "@id"
+    },
+    "SpecificallyDependentContinuant": {
+      "@id": "http://www.ifomis.org/bfo/1.1/snap#SpecificallyDependentContinuant",
+      "@type": "@id"
+    },
+    "TemporalInstant": {
+      "@id": "http://www.ifomis.org/bfo/1.1/span#TemporalInstant",
+      "@type": "@id"
+    },
+    "TemporalInterval": {
+      "@id": "http://www.ifomis.org/bfo/1.1/span#TemporalInterval",
+      "@type": "@id"
+    },
+    "TemporalRegion": {
+      "@id": "http://www.ifomis.org/bfo/1.1/span#TemporalRegion",
+      "@type": "@id"
+    },
+    "ThreeDimensionalRegion": {
+      "@id": "http://www.ifomis.org/bfo/1.1/snap#ThreeDimensionalRegion",
+      "@type": "@id"
+    },
+    "TwoDimensionalRegion": {
+      "@id": "http://www.ifomis.org/bfo/1.1/snap#TwoDimensionalRegion",
+      "@type": "@id"
+    },
+    "ZeroDimensionalRegion": {
+      "@id": "http://www.ifomis.org/bfo/1.1/snap#ZeroDimensionalRegion",
+      "@type": "@id"
+    },
+    "DSTForWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#DSTForWellbore",
+      "@type": "@id"
+    },
+    "LOTForWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#LOTForWellbore",
+      "@type": "@id"
+    },
+    "TUFLicenceeCompany": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2-ptl#TUFLicenceeCompany",
+      "@type": "@id"
+    },
+    "TUFLicenceeForTUF": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2-ptl#TUFLicenceeForTUF",
+      "@type": "@id"
+    },
+    "TUFOperatorCompany": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2-ptl#TUFOperatorCompany",
+      "@type": "@id"
+    },
+    "TUFOperatorForLicence": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2-ptl#TUFOperatorForLicence",
+      "@type": "@id"
+    },
+    "TUFOwnerCompany": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2-ptl#TUFOwnerCompany",
+      "@type": "@id"
+    },
+    "TUFOwnerForLicence": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2-ptl#TUFOwnerForLicence",
+      "@type": "@id"
+    },
+    "baaLicensee": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#baaLicensee",
+      "@type": "@id"
+    },
+    "baaOperatorCompany": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#baaOperatorCompany",
+      "@type": "@id"
+    },
+    "baaTransferCompany": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#baaTransferCompany",
+      "@type": "@id"
+    },
+    "belongsToFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#belongsToFacility",
+      "@type": "@id"
+    },
+    "belongsToWell": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#belongsToWell",
+      "@type": "@id"
+    },
+    "blockLocation": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#blockLocation",
+      "@type": "@id"
+    },
+    "ehContains": {
+      "@id": "http://www.opengis.net/ont/geosparql#ehContains",
+      "@type": "@id"
+    },
+    "sfContains": {
+      "@id": "http://www.opengis.net/ont/geosparql#sfContains",
+      "@type": "@id"
+    },
+    "containsWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#containsWellbore",
+      "@type": "@id"
+    },
+    "coordinateForSurvey": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#coordinateForSurvey",
+      "@type": "@id"
+    },
+    "coordinateForWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#coordinateForWellbore",
+      "@type": "@id"
+    },
+    "coreForWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#coreForWellbore",
+      "@type": "@id"
+    },
+    "corePhotoForWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#corePhotoForWellbore",
+      "@type": "@id"
+    },
+    "corePhotoURL": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#corePhotoURL",
+      "@type": "@id"
+    },
+    "coresForWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#coresForWellbore",
+      "@type": "@id"
+    },
+    "country": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#country",
+      "@type": "@id"
+    },
+    "ehCoveredBy": {
+      "@id": "http://www.opengis.net/ont/geosparql#ehCoveredBy",
+      "@type": "@id"
+    },
+    "ehCovers": {
+      "@id": "http://www.opengis.net/ont/geosparql#ehCovers",
+      "@type": "@id"
+    },
+    "sfCrosses": {
+      "@id": "http://www.opengis.net/ont/geosparql#sfCrosses",
+      "@type": "@id"
+    },
+    "currentFieldOperator": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#currentFieldOperator",
+      "@type": "@id"
+    },
+    "currentFieldOwner": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#currentFieldOwner",
+      "@type": "@id"
+    },
+    "currentResponsibleCompany": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#currentResponsibleCompany",
+      "@type": "@id"
+    },
+    "defaultGeometry": {
+      "@id": "http://www.opengis.net/ont/geosparql#defaultGeometry",
+      "@type": "@id"
+    },
+    "dependsOnTask": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dependsOnTask",
+      "@type": "@id"
+    },
+    "developmentWellboreForField": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#developmentWellboreForField",
+      "@type": "@id"
+    },
+    "developmentWellboreForLicence": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#developmentWellboreForLicence",
+      "@type": "@id"
+    },
+    "rcc8dc": {
+      "@id": "http://www.opengis.net/ont/geosparql#rcc8dc",
+      "@type": "@id"
+    },
+    "discoveryWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#discoveryWellbore",
+      "@type": "@id"
+    },
+    "ehDisjoint": {
+      "@id": "http://www.opengis.net/ont/geosparql#ehDisjoint",
+      "@type": "@id"
+    },
+    "sfDisjoint": {
+      "@id": "http://www.opengis.net/ont/geosparql#sfDisjoint",
+      "@type": "@id"
+    },
+    "documentForWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#documentForWellbore",
+      "@type": "@id"
+    },
+    "documentURL": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#documentURL",
+      "@type": "@id"
+    },
+    "drillingFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#drillingFacility",
+      "@type": "@id"
+    },
+    "drillingOperatorCompany": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#drillingOperatorCompany",
+      "@type": "@id"
+    },
+    "ehEquals": {
+      "@id": "http://www.opengis.net/ont/geosparql#ehEquals",
+      "@type": "@id"
+    },
+    "rcc8eq": {
+      "@id": "http://www.opengis.net/ont/geosparql#rcc8eq",
+      "@type": "@id"
+    },
+    "sfEquals": {
+      "@id": "http://www.opengis.net/ont/geosparql#sfEquals",
+      "@type": "@id"
+    },
+    "explorationWellboreForField": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#explorationWellboreForField",
+      "@type": "@id"
+    },
+    "explorationWellboreForLicence": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#explorationWellboreForLicence",
+      "@type": "@id"
+    },
+    "rcc8ec": {
+      "@id": "http://www.opengis.net/ont/geosparql#rcc8ec",
+      "@type": "@id"
+    },
+    "factMapURL": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#factMapURL",
+      "@type": "@id"
+    },
+    "factPageURL": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#factPageURL",
+      "@type": "@id"
+    },
+    "fieldLicensee": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#fieldLicensee",
+      "@type": "@id"
+    },
+    "fieldOperator": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#fieldOperator",
+      "@type": "@id"
+    },
+    "geochronologicEra": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#geochronologicEra",
+      "@type": "@id"
+    },
+    "broader": {
+      "@id": "http://www.w3.org/2004/02/skos/core#broader",
+      "@type": "@id"
+    },
+    "broadMatch": {
+      "@id": "http://www.w3.org/2004/02/skos/core#broadMatch",
+      "@type": "@id"
+    },
+    "broaderTransitive": {
+      "@id": "http://www.w3.org/2004/02/skos/core#broaderTransitive",
+      "@type": "@id"
+    },
+    "closeMatch": {
+      "@id": "http://www.w3.org/2004/02/skos/core#closeMatch",
+      "@type": "@id"
+    },
+    "exactMatch": {
+      "@id": "http://www.w3.org/2004/02/skos/core#exactMatch",
+      "@type": "@id"
+    },
+    "narrower": {
+      "@id": "http://www.w3.org/2004/02/skos/core#narrower",
+      "@type": "@id"
+    },
+    "narrowMatch": {
+      "@id": "http://www.w3.org/2004/02/skos/core#narrowMatch",
+      "@type": "@id"
+    },
+    "narrowerTransitive": {
+      "@id": "http://www.w3.org/2004/02/skos/core#narrowerTransitive",
+      "@type": "@id"
+    },
+    "related": {
+      "@id": "http://www.w3.org/2004/02/skos/core#related",
+      "@type": "@id"
+    },
+    "relatedMatch": {
+      "@id": "http://www.w3.org/2004/02/skos/core#relatedMatch",
+      "@type": "@id"
+    },
+    "hasGeometry": {
+      "@id": "http://www.opengis.net/ont/geosparql#hasGeometry",
+      "@type": "@id"
+    },
+    "inLithostratigraphicUnit": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#inLithostratigraphicUnit",
+      "@type": "@id"
+    },
+    "includedInField": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#includedInField",
+      "@type": "@id"
+    },
+    "ehInside": {
+      "@id": "http://www.opengis.net/ont/geosparql#ehInside",
+      "@type": "@id"
+    },
+    "sfIntersects": {
+      "@id": "http://www.opengis.net/ont/geosparql#sfIntersects",
+      "@type": "@id"
+    },
+    "investmentForField": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#investmentForField",
+      "@type": "@id"
+    },
+    "mappingRelation": {
+      "@id": "http://www.w3.org/2004/02/skos/core#mappingRelation",
+      "@type": "@id"
+    },
+    "semanticRelation": {
+      "@id": "http://www.w3.org/2004/02/skos/core#semanticRelation",
+      "@type": "@id"
+    },
+    "isGeometryOfFeature": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#isGeometryOfFeature",
+      "@type": "@id"
+    },
+    "lastOperatorCompany": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#lastOperatorCompany",
+      "@type": "@id"
+    },
+    "licenceLicenceeCompany": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2-ptl#licenceLicenceeCompany",
+      "@type": "@id"
+    },
+    "licenceLicensee": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#licenceLicensee",
+      "@type": "@id"
+    },
+    "licenceOperatorCompany": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#licenceOperatorCompany",
+      "@type": "@id"
+    },
+    "licenceTransferCompany": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#licenceTransferCompany",
+      "@type": "@id"
+    },
+    "licenceeForLicence": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2-ptl#licenceeForLicence",
+      "@type": "@id"
+    },
+    "licenseeForBAA": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#licenseeForBAA",
+      "@type": "@id"
+    },
+    "licenseeForField": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#licenseeForField",
+      "@type": "@id"
+    },
+    "licenseeForLicence": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#licenseeForLicence",
+      "@type": "@id"
+    },
+    "mainAreaLocation": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#mainAreaLocation",
+      "@type": "@id"
+    },
+    "ehMeet": {
+      "@id": "http://www.opengis.net/ont/geosparql#ehMeet",
+      "@type": "@id"
+    },
+    "member": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#member",
+      "@type": "@id"
+    },
+    "messageForLicence": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#messageForLicence",
+      "@type": "@id"
+    },
+    "messageForTUF": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2-ptl#messageForTUF",
+      "@type": "@id"
+    },
+    "mudTestForWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#mudTestForWellbore",
+      "@type": "@id"
+    },
+    "rcc8ntpp": {
+      "@id": "http://www.opengis.net/ont/geosparql#rcc8ntpp",
+      "@type": "@id"
+    },
+    "rcc8ntppi": {
+      "@id": "http://www.opengis.net/ont/geosparql#rcc8ntppi",
+      "@type": "@id"
+    },
+    "npdPageURL": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#npdPageURL",
+      "@type": "@id"
+    },
+    "oilSampleTestForWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#oilSampleTestForWellbore",
+      "@type": "@id"
+    },
+    "operatorForField": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#operatorForField",
+      "@type": "@id"
+    },
+    "operatorForLicence": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#operatorForLicence",
+      "@type": "@id"
+    },
+    "ehOverlap": {
+      "@id": "http://www.opengis.net/ont/geosparql#ehOverlap",
+      "@type": "@id"
+    },
+    "sfOverlaps": {
+      "@id": "http://www.opengis.net/ont/geosparql#sfOverlaps",
+      "@type": "@id"
+    },
+    "ownerForField": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ownerForField",
+      "@type": "@id"
+    },
+    "rcc8po": {
+      "@id": "http://www.opengis.net/ont/geosparql#rcc8po",
+      "@type": "@id"
+    },
+    "pipelineFromFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#pipelineFromFacility",
+      "@type": "@id"
+    },
+    "pipelineOperator": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#pipelineOperator",
+      "@type": "@id"
+    },
+    "pipelineToFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#pipelineToFacility",
+      "@type": "@id"
+    },
+    "pressReleaseURL": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#pressReleaseURL",
+      "@type": "@id"
+    },
+    "productionFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#productionFacility",
+      "@type": "@id"
+    },
+    "productionForDiscovery": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#productionForDiscovery",
+      "@type": "@id"
+    },
+    "productionForField": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#productionForField",
+      "@type": "@id"
+    },
+    "provinceLocation": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#provinceLocation",
+      "@type": "@id"
+    },
+    "quadrantLocation": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#quadrantLocation",
+      "@type": "@id"
+    },
+    "reclassedFromWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#reclassedFromWellbore",
+      "@type": "@id"
+    },
+    "registeredInCountry": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#registeredInCountry",
+      "@type": "@id"
+    },
+    "reportingCompany": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#reportingCompany",
+      "@type": "@id"
+    },
+    "reservesForCompany": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#reservesForCompany",
+      "@type": "@id"
+    },
+    "reservesForDiscovery": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#reservesForDiscovery",
+      "@type": "@id"
+    },
+    "reservesForField": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#reservesForField",
+      "@type": "@id"
+    },
+    "resourcesIncludedInDiscovery": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#resourcesIncludedInDiscovery",
+      "@type": "@id"
+    },
+    "shallowWellboreForField": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#shallowWellboreForField",
+      "@type": "@id"
+    },
+    "shallowWellboreForLicence": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#shallowWellboreForLicence",
+      "@type": "@id"
+    },
+    "statusForField": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#statusForField",
+      "@type": "@id"
+    },
+    "statusForLicence": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#statusForLicence",
+      "@type": "@id"
+    },
+    "statusForSurvey": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#statusForSurvey",
+      "@type": "@id"
+    },
+    "stratigraphicParent": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#stratigraphicParent",
+      "@type": "@id"
+    },
+    "stratumForWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#stratumForWellbore",
+      "@type": "@id"
+    },
+    "rcc8tpp": {
+      "@id": "http://www.opengis.net/ont/geosparql#rcc8tpp",
+      "@type": "@id"
+    },
+    "rcc8tppi": {
+      "@id": "http://www.opengis.net/ont/geosparql#rcc8tppi",
+      "@type": "@id"
+    },
+    "taskForCompany": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#taskForCompany",
+      "@type": "@id"
+    },
+    "taskForLicence": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#taskForLicence",
+      "@type": "@id"
+    },
+    "sfTouches": {
+      "@id": "http://www.opengis.net/ont/geosparql#sfTouches",
+      "@type": "@id"
+    },
+    "transferredBAA": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#transferredBAA",
+      "@type": "@id"
+    },
+    "transferredLicence": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#transferredLicence",
+      "@type": "@id"
+    },
+    "wellOperator": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellOperator",
+      "@type": "@id"
+    },
+    "wellboreAgeHc": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreAgeHc",
+      "@type": "@id"
+    },
+    "wellboreAgeHcLevel1": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreAgeHcLevel1",
+      "@type": "@id"
+    },
+    "wellboreAgeHcLevel2": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreAgeHcLevel2",
+      "@type": "@id"
+    },
+    "wellboreAgeHcLevel3": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreAgeHcLevel3",
+      "@type": "@id"
+    },
+    "wellboreAgeTD": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreAgeTD",
+      "@type": "@id"
+    },
+    "wellboreForDiscovery": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreForDiscovery",
+      "@type": "@id"
+    },
+    "wellboreForField": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreForField",
+      "@type": "@id"
+    },
+    "wellboreFormationHc": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreFormationHc",
+      "@type": "@id"
+    },
+    "wellboreFormationHcLevel1": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreFormationHcLevel1",
+      "@type": "@id"
+    },
+    "wellboreFormationHcLevel2": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreFormationHcLevel2",
+      "@type": "@id"
+    },
+    "wellboreFormationHcLevel3": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreFormationHcLevel3",
+      "@type": "@id"
+    },
+    "wellboreFormationTD": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreFormationTD",
+      "@type": "@id"
+    },
+    "sfWithin": {
+      "@id": "http://www.opengis.net/ont/geosparql#sfWithin",
+      "@type": "@id"
+    },
+    "DSTBottomHolePressure": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#DSTBottomHolePressure",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "DSTChokeSize": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#DSTChokeSize",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "DSTDepthFrom": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#DSTDepthFrom",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "DSTDepthTo": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#DSTDepthTo",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "DSTFinalFlowPressure": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#DSTFinalFlowPressure",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "DSTFinalShutInPressure": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#DSTFinalShutInPressure",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "DSTGasDensity": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#DSTGasDensity",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "DSTGasOilRelation": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#DSTGasOilRelation",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "DSTGasProducedRate": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#DSTGasProducedRate",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "DSTOilDensity": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#DSTOilDensity",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "DSTOilProducedRate": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#DSTOilProducedRate",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "DSTTestNo": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#DSTTestNo",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "LOTMudDensity": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#LOTMudDensity",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "SDFI": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#SDFI",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "TUFOwnerShare": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#TUFOwnerShare",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "ZValueFrom": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ZValueFrom",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "ZValueTo": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#ZValueTo",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "additionalCorrelationProperty": {
+      "@id": "http://resource.geosciml.org/ontology/timescale/gts-30#additionalCorrelationProperty",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "areaSize": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#areaSize",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "areaSize3DKm2": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#areaSize3DKm2",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "asGML": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML"
+    },
+    "asWKT": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT"
+    },
+    "blockId": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#blockId",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "casingDepth": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#casingDepth",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "casingDiameter": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#casingDiameter",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "casingType": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#casingType",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "codeEW": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#codeEW",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "codeNS": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#codeNS",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "companyGroup": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#companyGroup",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "companyShare": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#companyShare",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "coordinateDimension": {
+      "@id": "http://www.opengis.net/ont/geosparql#coordinateDimension",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "coreIntervalBottom": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#coreIntervalBottom",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "coreIntervalTop": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#coreIntervalTop",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "coreIntervalUOM": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#coreIntervalUOM",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "coreNo": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#coreNo",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "corePhotoTitle": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#corePhotoTitle",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "coreTotalLength": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#coreTotalLength",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "coresIntervalUOM": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#coresIntervalUOM"
+    },
+    "coresTotalLength": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#coresTotalLength",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "coresTotalNo": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#coresTotalNo",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "currentAreaSize": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#currentAreaSize"
+    },
+    "currentStatus": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#currentStatus",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "dateApproved": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateApproved",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateAwarded": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2-ptl#dateAwarded",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateBaaAreaValidFrom": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateBaaAreaValidFrom",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateBaaAreaValidTo": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateBaaAreaValidTo",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateBaaLicenseeValidFrom": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateBaaLicenseeValidFrom",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateBaaLicenseeValidTo": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateBaaLicenseeValidTo",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateBaaValidFrom": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateBaaValidFrom",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateBaaValidTo": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateBaaValidTo",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateFieldLicenseeFrom": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateFieldLicenseeFrom",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateFieldLicenseeTo": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateFieldLicenseeTo",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateFieldOperatorFrom": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateFieldOperatorFrom",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateFieldOperatorTo": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateFieldOperatorTo",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateFieldOwnerFrom": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateFieldOwnerFrom",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateFieldOwnerTo": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateFieldOwnerTo",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateIncludedInField": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateIncludedInField",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateInitialStatusTo": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateInitialStatusTo",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateLicenceAreaValidFrom": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateLicenceAreaValidFrom",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateLicenceAreaValidTo": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateLicenceAreaValidTo",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateLicenceGranted": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateLicenceGranted",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateLicenceValidFrom": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2-ptl#dateLicenceValidFrom",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateLicenceValidTo": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateLicenceValidTo",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateLicenseeValidFrom": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateLicenseeValidFrom",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateLicenseeValidTo": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateLicenseeValidTo",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateMessageRegistered": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2-ptl#dateMessageRegistered",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateMudMeasured": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateMudMeasured",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateOilSampleReceived": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateOilSampleReceived",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateOilSampleTest": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateOilSampleTest",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateOperatorValidFrom": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateOperatorValidFrom",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateOperatorValidTo": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateOperatorValidTo",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateProductionStart": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateProductionStart",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateResourceEstimate": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateResourceEstimate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateStatusFrom": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateStatusFrom",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateStatusTo": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateStatusTo",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateStatusValidFrom": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateStatusValidFrom",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateStatusValidTo": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateStatusValidTo",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateSurveyActualCompleted": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateSurveyActualCompleted",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateSurveyActualStart": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateSurveyActualStart",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateSurveyPlannedCompleted": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateSurveyPlannedCompleted",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateSurveyPlannedStart": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateSurveyPlannedStart",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateSurveyProgress": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateSurveyProgress",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateSyncNPD": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateSyncNPD",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateTUFOperatorValidFrom": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateTUFOperatorValidFrom",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateTUFOperatorValidTo": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateTUFOperatorValidTo",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateTUFOwnerValidFrom": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateTUFOwnerValidFrom",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateTUFOwnerValidTo": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateTUFOwnerValidTo",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateTaskExpiry": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateTaskExpiry",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateTransferValidFrom": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateTransferValidFrom",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateUpdated": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateUpdated",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateUpdatedMax": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateUpdatedMax",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateWDSSQC": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateWDSSQC",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateWellboreCompletion": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateWellboreCompletion",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateWellboreEntry": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#dateWellboreEntry",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "decimalDegreesEW": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#decimalDegreesEW",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "decimalDegreesNS": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#decimalDegreesNS",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "degreesEW": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#degreesEW",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "degreesNS": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#degreesNS",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "designLifetime": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#designLifetime",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "dimension": {
+      "@id": "http://www.opengis.net/ont/geosparql#dimension",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "discoveryYear": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#discoveryYear",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "documentFormat": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#documentFormat",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "documentName": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#documentName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "documentSize": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#documentSize",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "documentType": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#documentType",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "drillPermit": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#drillPermit",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "facilityFunction": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#facilityFunction"
+    },
+    "facilityType": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#facilityType",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "geodeticDatum": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#geodeticDatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasSerialization": {
+      "@id": "http://www.opengis.net/ont/geosparql#hasSerialization",
+      "@type": "@id"
+    },
+    "hydrocarbonType": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#hydrocarbonType",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "idNPD": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#idNPD",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "investmentNOK": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#investmentNOK",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "isActive": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#isActive"
+    },
+    "isCoreSampleAvailable": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#isCoreSampleAvailable"
+    },
+    "isCurrentLicenceLicensee": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#isCurrentLicenceLicensee"
+    },
+    "isCurrentLicenceOperator": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#isCurrentLicenceOperator"
+    },
+    "isDiscoveryWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#isDiscoveryWellbore"
+    },
+    "isEmpty": {
+      "@id": "http://www.opengis.net/ont/geosparql#isEmpty"
+    },
+    "isFormerLicenceLicensee": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#isFormerLicenceLicensee"
+    },
+    "isFormerLicenceOperator": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#isFormerLicenceOperator"
+    },
+    "isGeotechnicalMeasurement": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#isGeotechnicalMeasurement"
+    },
+    "isMarketAvailable": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#isMarketAvailable"
+    },
+    "isMultilateral": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#isMultilateral"
+    },
+    "isReentryWellbore": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#isReentryWellbore"
+    },
+    "isSamplingPerformed": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#isSamplingPerformed"
+    },
+    "isShallowDrillingPerformed": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#isShallowDrillingPerformed"
+    },
+    "isSimple": {
+      "@id": "http://www.opengis.net/ont/geosparql#isSimple"
+    },
+    "isStratigraphical": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#isStratigraphical"
+    },
+    "isSurfaceFacility": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#isSurfaceFacility"
+    },
+    "isTurnAreaIncluded": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#isTurnAreaIncluded"
+    },
+    "lengthBoatTotalKm": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#lengthBoatTotalKm",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "lengthCdpTotalKm": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#lengthCdpTotalKm",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "lengthPlannedBoatKm": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#lengthPlannedBoatKm",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "lengthPlannedCdpKm": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#lengthPlannedCdpKm",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "licenseeInterest": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#licenseeInterest",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "licensingActivityName": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#licensingActivityName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "mapNo": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#mapNo",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "messageNo": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2-ptl#messageNo",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "messageType": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2-ptl#messageType",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "minutesEW": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#minutesEW",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "minutesNS": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#minutesNS",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "mudMeasuredDepth": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#mudMeasuredDepth",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "mudType": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#mudType",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "mudViscosity": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#mudViscosity",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "mudWeight": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#mudWeight",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "mudYieldPoint": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#mudYieldPoint",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "name": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#name",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "notation": {
+      "@id": "http://www.w3.org/2004/02/skos/core#notation"
+    },
+    "oilSampleBottomDepth": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#oilSampleBottomDepth",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "oilSampleFluidType": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#oilSampleFluidType",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "oilSampleTestNumber": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#oilSampleTestNumber",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "oilSampleTestType": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#oilSampleTestType",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "oilSampleTopDepth": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#oilSampleTopDepth",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "originalAreaSize": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#originalAreaSize",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "pipelineDimension": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#pipelineDimension",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "pipelineMainGrouping": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#pipelineMainGrouping",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "pipelineMedium": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#pipelineMedium",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "polygonNo": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#polygonNo",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "polygonPointNo": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#polygonPointNo",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "producedCondensate": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#producedCondensate",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "producedGas": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#producedGas",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "producedNGL": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#producedNGL",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "producedOil": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#producedOil",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "producedOilEquivalents": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#producedOilEquivalents",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "producedWater": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#producedWater",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "productionMonth": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#productionMonth",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "productionYear": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#productionYear",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "recoverableCondensate": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#recoverableCondensate",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "recoverableGas": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#recoverableGas",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "recoverableNGL": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#recoverableNGL",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "recoverableOil": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#recoverableOil",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "recoverableOilEquivalents": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#recoverableOilEquivalents",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "remainingCondensate": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#remainingCondensate",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "remainingGas": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#remainingGas",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "remainingNGL": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#remainingNGL",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "remainingOil": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#remainingOil",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "remainingOilEquivalents": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#remainingOilEquivalents",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "reservesResourceClass": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#reservesResourceClass",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "secondsEW": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#secondsEW",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "secondsNS": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#secondsNS",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "sensorLength": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#sensorLength",
+      "@type": "@id"
+    },
+    "sensorNumbers": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#sensorNumbers",
+      "@type": "@id"
+    },
+    "sensorType": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#sensorType",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "shortName": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#shortName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sourceNumber": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#sourceNumber",
+      "@type": "@id"
+    },
+    "sourcePressure": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#sourcePressure",
+      "@type": "@id"
+    },
+    "sourceSize": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#sourceSize",
+      "@type": "@id"
+    },
+    "sourceType": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#sourceType",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "spatialDimension": {
+      "@id": "http://www.opengis.net/ont/geosparql#spatialDimension",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "status": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#status",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "stratigraphicLevel": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#stratigraphicLevel"
+    },
+    "surveySubType": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#surveySubType",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "surveyType": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#surveyType",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "taskID": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#taskID",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "taskType": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#taskType",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "transferDirection": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#transferDirection",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "transferredInterest": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#transferredInterest",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "utmEW": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#utmEW",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "utmNS": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#utmNS",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "utmZone": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#utmZone",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "waterDepth": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#waterDepth",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "wellType": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellType",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wellboreBottomHoleTemperature": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreBottomHoleTemperature",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "wellboreCompletionYear": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreCompletionYear",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "wellboreContent": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreContent",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wellboreDrillingDays": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreDrillingDays",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "wellboreEntryYear": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreEntryYear",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "wellboreFinalVerticalDepth": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreFinalVerticalDepth",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "wellboreHoleDepth": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreHoleDepth",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "wellboreHoleDiameter": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreHoleDiameter",
+      "@type": "@id"
+    },
+    "wellboreKellyBushElevation": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreKellyBushElevation",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "wellboreLicensingActivity": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreLicensingActivity",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wellboreMaxInclation": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreMaxInclation",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "wellboreNamePart1": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreNamePart1",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "wellboreNamePart2": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreNamePart2",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "wellboreNamePart3": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreNamePart3",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wellboreNamePart4": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreNamePart4",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "wellboreNamePart5": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreNamePart5",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wellboreNamePart6": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreNamePart6",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wellboreParent": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreParent"
+    },
+    "wellborePlannedContent": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellborePlannedContent",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wellborePlannedPurpose": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellborePlannedPurpose",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wellborePlotSymbol": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellborePlotSymbol",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "wellborePurpose": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellborePurpose",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wellboreReentryExplorationActivity": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreReentryExplorationActivity",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wellboreSeismicLocation": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreSeismicLocation",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wellboreStratumBottomDepth": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreStratumBottomDepth",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "wellboreStratumTopDepth": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreStratumTopDepth",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "wellboreTotalDepth": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreTotalDepth",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "wellboreType": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreType"
+    },
+    "wellboreWaterDepth": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreWaterDepth",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "wellboreWellType": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#wellboreWellType"
+    },
+    "contributor": "http://purl.org/dc/elements/1.1/contributor",
+    "creator": "http://purl.org/dc/elements/1.1/creator",
+    "description": "http://purl.org/dc/elements/1.1/description",
+    "format": "http://purl.org/dc/elements/1.1/format",
+    "identifier": "http://purl.org/dc/elements/1.1/identifier",
+    "language": "http://purl.org/dc/elements/1.1/language",
+    "publisher": "http://purl.org/dc/elements/1.1/publisher",
+    "rights": "http://purl.org/dc/elements/1.1/rights",
+    "source": "http://purl.org/dc/elements/1.1/source",
+    "title": "http://purl.org/dc/elements/1.1/title",
+    "amount": "http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#amount",
+    "boundaryLevel": "http://resource.geosciml.org/ontology/timescale/gts-30#boundaryLevel",
+    "boundingBox": "http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#boundingBox",
+    "changeNote": "http://www.w3.org/2004/02/skos/core#changeNote",
+    "column": "http://sws.ifi.uio.no/vocab/sql#column",
+    "columns": "http://sws.ifi.uio.no/vocab/sql#columns",
+    "comment": "http://sws.ifi.uio.no/vocab/sql#comment",
+    "component": "http://resource.geosciml.org/ontology/timescale/gtrs-30#component",
+    "construction": "http://sws.ifi.uio.no/vocab/sql#construction",
+    "coordinates": "http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#coordinates",
+    "created": "http://purl.org/dc/terms/created",
+    "datatype": "http://sws.ifi.uio.no/vocab/sql#datatype",
+    "definition": "http://sws.ifi.uio.no/vocab/npd-v2#definition",
+    "editorialNote": "http://www.w3.org/2004/02/skos/core#editorialNote",
+    "end": "http://resource.geosciml.org/ontology/timescale/gtrs-30#end",
+    "example": "http://www.w3.org/2004/02/skos/core#example",
+    "frame": "http://def.seegrid.csiro.au/isotc211/iso19108/2006/temporal#frame",
+    "hasVersion": "http://purl.org/dc/terms/hasVersion",
+    "hiddenLabel": "http://www.w3.org/2004/02/skos/core#hiddenLabel",
+    "historyNote": "http://www.w3.org/2004/02/skos/core#historyNote",
+    "isPrimaryTopicOf": "http://xmlns.com/foaf/0.1/isPrimaryTopicOf",
+    "issued": "http://purl.org/dc/terms/issued",
+    "label": "http://sws.ifi.uio.no/vocab/sql#label",
+    "message": "http://sws.ifi.uio.no/vocab/npd-v2-ptl#message",
+    "modified": "http://purl.org/dc/terms/modified",
+    "nextEra": "http://resource.geosciml.org/ontology/timescale/gtrs-30#nextEra",
+    "note": "http://www.w3.org/2004/02/skos/core#note",
+    "polygonLicenceComment": "http://sws.ifi.uio.no/vocab/npd-v2#polygonLicenceComment",
+    "position": "http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#position",
+    "positionalUncertainty": "http://resource.geosciml.org/ontology/timescale/gtrs-30#positionalUncertainty",
+    "previousEra": "http://resource.geosciml.org/ontology/timescale/gtrs-30#previousEra",
+    "primaryGuidingCriterion": "http://resource.geosciml.org/ontology/timescale/gts-30#primaryGuidingCriterion",
+    "rank": "http://resource.geosciml.org/ontology/timescale/gts-30#rank",
+    "referencePoint": "http://resource.geosciml.org/ontology/timescale/gts-30#referencePoint",
+    "replaces": "http://purl.org/dc/terms/replaces",
+    "scopeNote": "http://www.w3.org/2004/02/skos/core#scopeNote",
+    "shape": "http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling#shape",
+    "srs": "http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#srs",
+    "start": "http://resource.geosciml.org/ontology/timescale/gtrs-30#start",
+    "stratotype": "http://resource.geosciml.org/ontology/timescale/gts-30#stratotype",
+    "surveyProgressDescription": "http://sws.ifi.uio.no/vocab/npd-v2#surveyProgressDescription",
+    "system": "http://resource.geosciml.org/ontology/timescale/gtrs-30#system",
+    "table": "http://sws.ifi.uio.no/vocab/sql#table",
+    "unit": "http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#unit",
+    "value": "http://def.seegrid.csiro.au/isotc211/iso19108/2006/temporal#value",
+    "2009": {
+      "@id": "http://resource.geosciml.org/classifierscheme/ics/ischart/2009",
+      "@type": "@id"
+    },
+    "Aalenian": {
+      "@id": "http://dbpedia.org/resource/Aalenian",
+      "@type": "@id"
+    },
+    "Aeronian": {
+      "@id": "http://dbpedia.org/resource/Aeronian",
+      "@type": "@id"
+    },
+    "Albian": {
+      "@id": "http://dbpedia.org/resource/Albian",
+      "@type": "@id"
+    },
+    "Anisian": {
+      "@id": "http://dbpedia.org/resource/Anisian",
+      "@type": "@id"
+    },
+    "Aptian": {
+      "@id": "http://dbpedia.org/resource/Aptian",
+      "@type": "@id"
+    },
+    "Aquitanian": {
+      "@id": "http://dbpedia.org/resource/Aquitanian",
+      "@type": "@id"
+    },
+    "Archean": {
+      "@id": "http://dbpedia.org/resource/Archean",
+      "@type": "@id"
+    },
+    "Artinskian": {
+      "@id": "http://dbpedia.org/resource/Artinskian",
+      "@type": "@id"
+    },
+    "Asselian": {
+      "@id": "http://dbpedia.org/resource/Asselian",
+      "@type": "@id"
+    },
+    "Bajocian": {
+      "@id": "http://dbpedia.org/resource/Bajocian",
+      "@type": "@id"
+    },
+    "Barremian": {
+      "@id": "http://dbpedia.org/resource/Barremian",
+      "@type": "@id"
+    },
+    "Bartonian": {
+      "@id": "http://dbpedia.org/resource/Bartonian",
+      "@type": "@id"
+    },
+    "BaseAeronian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseAeronian",
+      "@type": "@id"
+    },
+    "BaseAlbian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseAlbian",
+      "@type": "@id"
+    },
+    "BaseAptian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseAptian",
+      "@type": "@id"
+    },
+    "BaseArchean": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseArchean",
+      "@type": "@id"
+    },
+    "BaseArtinskian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseArtinskian",
+      "@type": "@id"
+    },
+    "BaseAsselian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseAsselian",
+      "@type": "@id"
+    },
+    "BaseBajocian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseBajocian",
+      "@type": "@id"
+    },
+    "BaseBarremian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseBarremian",
+      "@type": "@id"
+    },
+    "BaseBartonian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseBartonian",
+      "@type": "@id"
+    },
+    "BaseBashkirian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseBashkirian",
+      "@type": "@id"
+    },
+    "BaseBathonian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseBathonian",
+      "@type": "@id"
+    },
+    "BaseBurdigalian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseBurdigalian",
+      "@type": "@id"
+    },
+    "BaseCalabrian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCalabrian",
+      "@type": "@id"
+    },
+    "BaseCallovian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCallovian",
+      "@type": "@id"
+    },
+    "BaseCambrianSeries2": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCambrianSeries2",
+      "@type": "@id"
+    },
+    "BaseCambrianSeries3": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCambrianSeries3",
+      "@type": "@id"
+    },
+    "BaseCambrianStage10": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCambrianStage10",
+      "@type": "@id"
+    },
+    "BaseCambrianStage2": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCambrianStage2",
+      "@type": "@id"
+    },
+    "BaseCambrianStage4": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCambrianStage4",
+      "@type": "@id"
+    },
+    "BaseCampanian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCampanian",
+      "@type": "@id"
+    },
+    "BaseCapitanian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCapitanian",
+      "@type": "@id"
+    },
+    "BaseCarboniferous": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCarboniferous",
+      "@type": "@id"
+    },
+    "BaseCenozoic": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCenozoic",
+      "@type": "@id"
+    },
+    "BaseChanghsingian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseChanghsingian",
+      "@type": "@id"
+    },
+    "BaseChattian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseChattian",
+      "@type": "@id"
+    },
+    "BaseCisuralian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCisuralian",
+      "@type": "@id"
+    },
+    "BaseConiacian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseConiacian",
+      "@type": "@id"
+    },
+    "BaseCretaceous": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCretaceous",
+      "@type": "@id"
+    },
+    "BaseCryogenian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCryogenian",
+      "@type": "@id"
+    },
+    "BaseDarriwilian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseDarriwilian",
+      "@type": "@id"
+    },
+    "BaseDevonian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseDevonian",
+      "@type": "@id"
+    },
+    "BaseDrumian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseDrumian",
+      "@type": "@id"
+    },
+    "BaseEctasian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseEctasian",
+      "@type": "@id"
+    },
+    "BaseEdiacaran": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseEdiacaran",
+      "@type": "@id"
+    },
+    "BaseEmsian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseEmsian",
+      "@type": "@id"
+    },
+    "BaseEocene": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseEocene",
+      "@type": "@id"
+    },
+    "BaseFamennian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseFamennian",
+      "@type": "@id"
+    },
+    "BaseFloian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseFloian",
+      "@type": "@id"
+    },
+    "BaseFurongian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseFurongian",
+      "@type": "@id"
+    },
+    "BaseGivetian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseGivetian",
+      "@type": "@id"
+    },
+    "BaseGuadalupian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseGuadalupian",
+      "@type": "@id"
+    },
+    "BaseGuzhangian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseGuzhangian",
+      "@type": "@id"
+    },
+    "BaseGzhelian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseGzhelian",
+      "@type": "@id"
+    },
+    "BaseHauterivian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseHauterivian",
+      "@type": "@id"
+    },
+    "BaseHirnantian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseHirnantian",
+      "@type": "@id"
+    },
+    "BaseHolocene": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseHolocene",
+      "@type": "@id"
+    },
+    "BaseHomerian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseHomerian",
+      "@type": "@id"
+    },
+    "BaseJiangshanian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseJiangshanian",
+      "@type": "@id"
+    },
+    "BaseJurassic": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseJurassic",
+      "@type": "@id"
+    },
+    "BaseKasimovian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseKasimovian",
+      "@type": "@id"
+    },
+    "BaseKatian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseKatian",
+      "@type": "@id"
+    },
+    "BaseKimmeridgian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseKimmeridgian",
+      "@type": "@id"
+    },
+    "BaseKungurian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseKungurian",
+      "@type": "@id"
+    },
+    "BaseLadinian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLadinian",
+      "@type": "@id"
+    },
+    "BaseLanghian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLanghian",
+      "@type": "@id"
+    },
+    "BaseLopingian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLopingian",
+      "@type": "@id"
+    },
+    "BaseLowerMississippian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLowerMississippian",
+      "@type": "@id"
+    },
+    "BaseLowerPennsylvanian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLowerPennsylvanian",
+      "@type": "@id"
+    },
+    "BaseLudfordian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLudfordian",
+      "@type": "@id"
+    },
+    "BaseLudlow": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLudlow",
+      "@type": "@id"
+    },
+    "BaseLutetian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLutetian",
+      "@type": "@id"
+    },
+    "BaseMaastrichtian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMaastrichtian",
+      "@type": "@id"
+    },
+    "BaseMesoarchean": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMesoarchean",
+      "@type": "@id"
+    },
+    "BaseMesoproterozoic": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMesoproterozoic",
+      "@type": "@id"
+    },
+    "BaseMesozoic": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMesozoic",
+      "@type": "@id"
+    },
+    "BaseMessinian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMessinian",
+      "@type": "@id"
+    },
+    "BaseMiddleDevonian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddleDevonian",
+      "@type": "@id"
+    },
+    "BaseMiddleJurassic": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddleJurassic",
+      "@type": "@id"
+    },
+    "BaseMiddleMississippian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddleMississippian",
+      "@type": "@id"
+    },
+    "BaseMiddleOrdovician": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddleOrdovician",
+      "@type": "@id"
+    },
+    "BaseMiddlePennsylvanian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddlePennsylvanian",
+      "@type": "@id"
+    },
+    "BaseMiddlePleistocene": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddlePleistocene",
+      "@type": "@id"
+    },
+    "BaseMiddleTriassic": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddleTriassic",
+      "@type": "@id"
+    },
+    "BaseMississipian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMississipian",
+      "@type": "@id"
+    },
+    "BaseMoscovian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMoscovian",
+      "@type": "@id"
+    },
+    "BaseNeoarchean": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseNeoarchean",
+      "@type": "@id"
+    },
+    "BaseNeogene": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseNeogene",
+      "@type": "@id"
+    },
+    "BaseNeoproterozoic": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseNeoproterozoic",
+      "@type": "@id"
+    },
+    "BaseNorian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseNorian",
+      "@type": "@id"
+    },
+    "BaseOlenekian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseOlenekian",
+      "@type": "@id"
+    },
+    "BaseOligocene": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseOligocene",
+      "@type": "@id"
+    },
+    "BaseOrdovician": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseOrdovician",
+      "@type": "@id"
+    },
+    "BaseOrosirian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseOrosirian",
+      "@type": "@id"
+    },
+    "BasePaleoarchean": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePaleoarchean",
+      "@type": "@id"
+    },
+    "BasePennsylvanian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePennsylvanian",
+      "@type": "@id"
+    },
+    "BasePermian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePermian",
+      "@type": "@id"
+    },
+    "BasePhanerozoic": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePhanerozoic",
+      "@type": "@id"
+    },
+    "BasePiacenzian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePiacenzian",
+      "@type": "@id"
+    },
+    "BasePliensbachian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePliensbachian",
+      "@type": "@id"
+    },
+    "BasePliocene": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePliocene",
+      "@type": "@id"
+    },
+    "BasePragian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePragian",
+      "@type": "@id"
+    },
+    "BasePriabonian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePriabonian",
+      "@type": "@id"
+    },
+    "BasePridoli": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePridoli",
+      "@type": "@id"
+    },
+    "BaseProterozoic": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseProterozoic",
+      "@type": "@id"
+    },
+    "BaseQuaternary": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseQuaternary",
+      "@type": "@id"
+    },
+    "BaseRhaetian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseRhaetian",
+      "@type": "@id"
+    },
+    "BaseRhyacian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseRhyacian",
+      "@type": "@id"
+    },
+    "BaseSakmarian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseSakmarian",
+      "@type": "@id"
+    },
+    "BaseSantonian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseSantonian",
+      "@type": "@id"
+    },
+    "BaseSelandian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseSelandian",
+      "@type": "@id"
+    },
+    "BaseSerpukhovian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseSerpukhovian",
+      "@type": "@id"
+    },
+    "BaseSerravallian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseSerravallian",
+      "@type": "@id"
+    },
+    "BaseSilurian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseSilurian",
+      "@type": "@id"
+    },
+    "BaseSinemurian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseSinemurian",
+      "@type": "@id"
+    },
+    "BaseStatherian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseStatherian",
+      "@type": "@id"
+    },
+    "BaseStenian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseStenian",
+      "@type": "@id"
+    },
+    "BaseTelychian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseTelychian",
+      "@type": "@id"
+    },
+    "BaseThanetian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseThanetian",
+      "@type": "@id"
+    },
+    "BaseTithonian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseTithonian",
+      "@type": "@id"
+    },
+    "BaseToarcian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseToarcian",
+      "@type": "@id"
+    },
+    "BaseTortonian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseTortonian",
+      "@type": "@id"
+    },
+    "BaseTournaisian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseTournaisian",
+      "@type": "@id"
+    },
+    "BaseTuronian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseTuronian",
+      "@type": "@id"
+    },
+    "BaseUpperCretaceous": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperCretaceous",
+      "@type": "@id"
+    },
+    "BaseUpperDevonian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperDevonian",
+      "@type": "@id"
+    },
+    "BaseUpperJurassic": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperJurassic",
+      "@type": "@id"
+    },
+    "BaseUpperMississippian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperMississippian",
+      "@type": "@id"
+    },
+    "BaseUpperOrdovician": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperOrdovician",
+      "@type": "@id"
+    },
+    "BaseUpperPennsylvanian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperPennsylvanian",
+      "@type": "@id"
+    },
+    "BaseUpperPleistocene": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperPleistocene",
+      "@type": "@id"
+    },
+    "BaseUpperTriassic": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperTriassic",
+      "@type": "@id"
+    },
+    "BaseValanginian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseValanginian",
+      "@type": "@id"
+    },
+    "BaseWenlock": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseWenlock",
+      "@type": "@id"
+    },
+    "BaseWordian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseWordian",
+      "@type": "@id"
+    },
+    "BaseAeronian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseAeronian-location",
+      "@type": "@id"
+    },
+    "BaseAeronian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseAeronian-position",
+      "@type": "@id"
+    },
+    "BaseAeronianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseAeronianTime",
+      "@type": "@id"
+    },
+    "BaseAeronianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseAeronianUncertainty",
+      "@type": "@id"
+    },
+    "BaseAlbianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseAlbianTime",
+      "@type": "@id"
+    },
+    "BaseAlbianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseAlbianUncertainty",
+      "@type": "@id"
+    },
+    "BaseAptianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseAptianTime",
+      "@type": "@id"
+    },
+    "BaseAptianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseAptianUncertainty",
+      "@type": "@id"
+    },
+    "BaseAquitanian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseAquitanian-location",
+      "@type": "@id"
+    },
+    "BaseAquitanian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseAquitanian-position",
+      "@type": "@id"
+    },
+    "BaseArcheanTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseArcheanTime",
+      "@type": "@id"
+    },
+    "BaseArtinskianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseArtinskianTime",
+      "@type": "@id"
+    },
+    "BaseArtinskianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseArtinskianUncertainty",
+      "@type": "@id"
+    },
+    "BaseBajocian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseBajocian-location",
+      "@type": "@id"
+    },
+    "BaseBajocian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseBajocian-position",
+      "@type": "@id"
+    },
+    "BaseBajocianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseBajocianTime",
+      "@type": "@id"
+    },
+    "BaseBajocianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseBajocianUncertainty",
+      "@type": "@id"
+    },
+    "BaseBarremianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseBarremianTime",
+      "@type": "@id"
+    },
+    "BaseBarremianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseBarremianUncertainty",
+      "@type": "@id"
+    },
+    "BaseBartonianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseBartonianTime",
+      "@type": "@id"
+    },
+    "BaseBartonianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseBartonianUncertainty",
+      "@type": "@id"
+    },
+    "BaseBathonian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseBathonian-location",
+      "@type": "@id"
+    },
+    "BaseBathonian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseBathonian-position",
+      "@type": "@id"
+    },
+    "BaseBathonianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseBathonianTime",
+      "@type": "@id"
+    },
+    "BaseBathonianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseBathonianUncertainty",
+      "@type": "@id"
+    },
+    "BaseBurdigalianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseBurdigalianTime",
+      "@type": "@id"
+    },
+    "BaseCalabrian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCalabrian-location",
+      "@type": "@id"
+    },
+    "BaseCalabrian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCalabrian-position",
+      "@type": "@id"
+    },
+    "BaseCalabrianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCalabrianTime",
+      "@type": "@id"
+    },
+    "BaseCallovianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCallovianTime",
+      "@type": "@id"
+    },
+    "BaseCallovianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCallovianUncertainty",
+      "@type": "@id"
+    },
+    "BaseCambrianSeries2Time": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCambrianSeries2Time",
+      "@type": "@id"
+    },
+    "BaseCambrianSeries3Time": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCambrianSeries3Time",
+      "@type": "@id"
+    },
+    "BaseCambrianStage10Time": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCambrianStage10Time",
+      "@type": "@id"
+    },
+    "BaseCambrianStage10Uncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCambrianStage10Uncertainty",
+      "@type": "@id"
+    },
+    "BaseCambrianStage2Time": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCambrianStage2Time",
+      "@type": "@id"
+    },
+    "BaseCambrianStage2Uncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCambrianStage2Uncertainty",
+      "@type": "@id"
+    },
+    "BaseCambrianStage4Time": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCambrianStage4Time",
+      "@type": "@id"
+    },
+    "BaseCambrianStage4Uncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCambrianStage4Uncertainty",
+      "@type": "@id"
+    },
+    "BaseCambrianStage9Uncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCambrianStage9Uncertainty",
+      "@type": "@id"
+    },
+    "BaseCampanianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCampanianTime",
+      "@type": "@id"
+    },
+    "BaseCampanianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCampanianUncertainty",
+      "@type": "@id"
+    },
+    "BaseCapitanian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCapitanian-location",
+      "@type": "@id"
+    },
+    "BaseCapitanian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCapitanian-position",
+      "@type": "@id"
+    },
+    "BaseCapitanianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCapitanianTime",
+      "@type": "@id"
+    },
+    "BaseCapitanianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCapitanianUncertainty",
+      "@type": "@id"
+    },
+    "BaseCarboniferous-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCarboniferous-location",
+      "@type": "@id"
+    },
+    "BaseCarboniferous-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCarboniferous-position",
+      "@type": "@id"
+    },
+    "BaseCarboniferousTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCarboniferousTime",
+      "@type": "@id"
+    },
+    "BaseCarboniferousUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCarboniferousUncertainty",
+      "@type": "@id"
+    },
+    "BaseCenozoic-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCenozoic-location",
+      "@type": "@id"
+    },
+    "BaseCenozoic-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCenozoic-position",
+      "@type": "@id"
+    },
+    "BaseCenozoicTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCenozoicTime",
+      "@type": "@id"
+    },
+    "BaseCenozoicUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCenozoicUncertainty",
+      "@type": "@id"
+    },
+    "BaseChanghsingian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseChanghsingian-location",
+      "@type": "@id"
+    },
+    "BaseChanghsingian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseChanghsingian-position",
+      "@type": "@id"
+    },
+    "BaseChanghsingianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseChanghsingianTime",
+      "@type": "@id"
+    },
+    "BaseChanghsingianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseChanghsingianUncertainty",
+      "@type": "@id"
+    },
+    "BaseChattianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseChattianTime",
+      "@type": "@id"
+    },
+    "BaseChattianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseChattianUncertainty",
+      "@type": "@id"
+    },
+    "BaseConiacianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseConiacianTime",
+      "@type": "@id"
+    },
+    "BaseConiacianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseConiacianUncertainty",
+      "@type": "@id"
+    },
+    "BaseCretaceousTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCretaceousTime",
+      "@type": "@id"
+    },
+    "BaseCretaceousUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCretaceousUncertainty",
+      "@type": "@id"
+    },
+    "BaseCryogenianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseCryogenianTime",
+      "@type": "@id"
+    },
+    "BaseDarriwilian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseDarriwilian-location",
+      "@type": "@id"
+    },
+    "BaseDarriwilian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseDarriwilian-position",
+      "@type": "@id"
+    },
+    "BaseDarriwilianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseDarriwilianTime",
+      "@type": "@id"
+    },
+    "BaseDarriwilianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseDarriwilianUncertainty",
+      "@type": "@id"
+    },
+    "BaseDevonian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseDevonian-location",
+      "@type": "@id"
+    },
+    "BaseDevonian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseDevonian-position",
+      "@type": "@id"
+    },
+    "BaseDevonianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseDevonianTime",
+      "@type": "@id"
+    },
+    "BaseDevonianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseDevonianUncertainty",
+      "@type": "@id"
+    },
+    "BaseDrumian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseDrumian-location",
+      "@type": "@id"
+    },
+    "BaseDrumian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseDrumian-position",
+      "@type": "@id"
+    },
+    "BaseDrumianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseDrumianTime",
+      "@type": "@id"
+    },
+    "BaseEctasianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseEctasianTime",
+      "@type": "@id"
+    },
+    "BaseEdiacaran-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseEdiacaran-location",
+      "@type": "@id"
+    },
+    "BaseEdiacaran-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseEdiacaran-position",
+      "@type": "@id"
+    },
+    "BaseEdiacaranTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseEdiacaranTime",
+      "@type": "@id"
+    },
+    "BaseEmsian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseEmsian-location",
+      "@type": "@id"
+    },
+    "BaseEmsian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseEmsian-position",
+      "@type": "@id"
+    },
+    "BaseEmsianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseEmsianTime",
+      "@type": "@id"
+    },
+    "BaseEmsianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseEmsianUncertainty",
+      "@type": "@id"
+    },
+    "BaseEocene-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseEocene-location",
+      "@type": "@id"
+    },
+    "BaseEocene-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseEocene-position",
+      "@type": "@id"
+    },
+    "BaseEoceneTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseEoceneTime",
+      "@type": "@id"
+    },
+    "BaseEoceneUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseEoceneUncertainty",
+      "@type": "@id"
+    },
+    "BaseFamennian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseFamennian-location",
+      "@type": "@id"
+    },
+    "BaseFamennian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseFamennian-position",
+      "@type": "@id"
+    },
+    "BaseFamennianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseFamennianTime",
+      "@type": "@id"
+    },
+    "BaseFamennianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseFamennianUncertainty",
+      "@type": "@id"
+    },
+    "BaseFloian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseFloian-location",
+      "@type": "@id"
+    },
+    "BaseFloian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseFloian-position",
+      "@type": "@id"
+    },
+    "BaseFloianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseFloianTime",
+      "@type": "@id"
+    },
+    "BaseFloianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseFloianUncertainty",
+      "@type": "@id"
+    },
+    "BaseFurongian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseFurongian-location",
+      "@type": "@id"
+    },
+    "BaseFurongian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseFurongian-position",
+      "@type": "@id"
+    },
+    "BaseFurongianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseFurongianTime",
+      "@type": "@id"
+    },
+    "BaseGivetian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseGivetian-location",
+      "@type": "@id"
+    },
+    "BaseGivetian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseGivetian-position",
+      "@type": "@id"
+    },
+    "BaseGivetianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseGivetianTime",
+      "@type": "@id"
+    },
+    "BaseGivetianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseGivetianUncertainty",
+      "@type": "@id"
+    },
+    "BaseGuadalupian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseGuadalupian-location",
+      "@type": "@id"
+    },
+    "BaseGuadalupian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseGuadalupian-position",
+      "@type": "@id"
+    },
+    "BaseGuadalupianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseGuadalupianTime",
+      "@type": "@id"
+    },
+    "BaseGuadalupianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseGuadalupianUncertainty",
+      "@type": "@id"
+    },
+    "BaseGuzhangian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseGuzhangian-location",
+      "@type": "@id"
+    },
+    "BaseGuzhangian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseGuzhangian-position",
+      "@type": "@id"
+    },
+    "BaseGuzhangianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseGuzhangianTime",
+      "@type": "@id"
+    },
+    "BaseGzhelianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseGzhelianTime",
+      "@type": "@id"
+    },
+    "BaseGzhelianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseGzhelianUncertainty",
+      "@type": "@id"
+    },
+    "BaseHauterivianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseHauterivianTime",
+      "@type": "@id"
+    },
+    "BaseHauterivianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseHauterivianUncertainty",
+      "@type": "@id"
+    },
+    "BaseHirnantian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseHirnantian-location",
+      "@type": "@id"
+    },
+    "BaseHirnantian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseHirnantian-position",
+      "@type": "@id"
+    },
+    "BaseHirnantianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseHirnantianTime",
+      "@type": "@id"
+    },
+    "BaseHirnantianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseHirnantianUncertainty",
+      "@type": "@id"
+    },
+    "BaseHolocene-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseHolocene-position",
+      "@type": "@id"
+    },
+    "BaseHoloceneTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseHoloceneTime",
+      "@type": "@id"
+    },
+    "BaseHomerian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseHomerian-location",
+      "@type": "@id"
+    },
+    "BaseHomerian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseHomerian-position",
+      "@type": "@id"
+    },
+    "BaseHomerianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseHomerianTime",
+      "@type": "@id"
+    },
+    "BaseHomerianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseHomerianUncertainty",
+      "@type": "@id"
+    },
+    "BaseJiangshanianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseJiangshanianTime",
+      "@type": "@id"
+    },
+    "BaseJurassic-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseJurassic-location",
+      "@type": "@id"
+    },
+    "BaseJurassic-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseJurassic-position",
+      "@type": "@id"
+    },
+    "BaseJurassicTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseJurassicTime",
+      "@type": "@id"
+    },
+    "BaseJurassicUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseJurassicUncertainty",
+      "@type": "@id"
+    },
+    "BaseKatian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseKatian-location",
+      "@type": "@id"
+    },
+    "BaseKatian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseKatian-position",
+      "@type": "@id"
+    },
+    "BaseKatianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseKatianTime",
+      "@type": "@id"
+    },
+    "BaseKatianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseKatianUncertainty",
+      "@type": "@id"
+    },
+    "BaseKimmeridgianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseKimmeridgianTime",
+      "@type": "@id"
+    },
+    "BaseKimmeridgianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseKimmeridgianUncertainty",
+      "@type": "@id"
+    },
+    "BaseKungurianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseKungurianTime",
+      "@type": "@id"
+    },
+    "BaseKungurianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseKungurianUncertainty",
+      "@type": "@id"
+    },
+    "BaseLadinian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLadinian-location",
+      "@type": "@id"
+    },
+    "BaseLadinian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLadinian-position",
+      "@type": "@id"
+    },
+    "BaseLadinianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLadinianTime",
+      "@type": "@id"
+    },
+    "BaseLadinianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLadinianUncertainty",
+      "@type": "@id"
+    },
+    "BaseLanghianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLanghianTime",
+      "@type": "@id"
+    },
+    "BaseLopingian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLopingian-location",
+      "@type": "@id"
+    },
+    "BaseLopingian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLopingian-position",
+      "@type": "@id"
+    },
+    "BaseLopingianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLopingianTime",
+      "@type": "@id"
+    },
+    "BaseLopingianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLopingianUncertainty",
+      "@type": "@id"
+    },
+    "BaseLudfordian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLudfordian-location",
+      "@type": "@id"
+    },
+    "BaseLudfordian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLudfordian-position",
+      "@type": "@id"
+    },
+    "BaseLudfordianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLudfordianTime",
+      "@type": "@id"
+    },
+    "BaseLudfordianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLudfordianUncertainty",
+      "@type": "@id"
+    },
+    "BaseLudlow-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLudlow-location",
+      "@type": "@id"
+    },
+    "BaseLudlow-posiation": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLudlow-posiation",
+      "@type": "@id"
+    },
+    "BaseLudlowPosition": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLudlowPosition",
+      "@type": "@id"
+    },
+    "BaseLudlowUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLudlowUncertainty",
+      "@type": "@id"
+    },
+    "BaseLutetianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLutetianTime",
+      "@type": "@id"
+    },
+    "BaseLutetianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseLutetianUncertainty",
+      "@type": "@id"
+    },
+    "BaseMaastrichtian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMaastrichtian-location",
+      "@type": "@id"
+    },
+    "BaseMaastrichtian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMaastrichtian-position",
+      "@type": "@id"
+    },
+    "BaseMaastrichtianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMaastrichtianTime",
+      "@type": "@id"
+    },
+    "BaseMaastrichtianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMaastrichtianUncertainty",
+      "@type": "@id"
+    },
+    "BaseMesoarcheanTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMesoarcheanTime",
+      "@type": "@id"
+    },
+    "BaseMesoproterozoicTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMesoproterozoicTime",
+      "@type": "@id"
+    },
+    "BaseMesozoic-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMesozoic-location",
+      "@type": "@id"
+    },
+    "BaseMesozoic-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMesozoic-position",
+      "@type": "@id"
+    },
+    "BaseMesozoicTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMesozoicTime",
+      "@type": "@id"
+    },
+    "BaseMesozoicUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMesozoicUncertainty",
+      "@type": "@id"
+    },
+    "BaseMessinian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMessinian-location",
+      "@type": "@id"
+    },
+    "BaseMessinian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMessinian-position",
+      "@type": "@id"
+    },
+    "BaseMessinianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMessinianTime",
+      "@type": "@id"
+    },
+    "BaseMiddleDevonian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddleDevonian-location",
+      "@type": "@id"
+    },
+    "BaseMiddleDevonian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddleDevonian-position",
+      "@type": "@id"
+    },
+    "BaseMiddleDevonianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddleDevonianTime",
+      "@type": "@id"
+    },
+    "BaseMiddleDevonianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddleDevonianUncertainty",
+      "@type": "@id"
+    },
+    "BaseMiddleJurassic-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddleJurassic-location",
+      "@type": "@id"
+    },
+    "BaseMiddleJurassic-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddleJurassic-position",
+      "@type": "@id"
+    },
+    "BaseMiddleJurassicTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddleJurassicTime",
+      "@type": "@id"
+    },
+    "BaseMiddleJurassicUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddleJurassicUncertainty",
+      "@type": "@id"
+    },
+    "BaseMiddleMississippian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddleMississippian-location",
+      "@type": "@id"
+    },
+    "BaseMiddleMississippian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddleMississippian-position",
+      "@type": "@id"
+    },
+    "BaseMiddleMississippianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddleMississippianTime",
+      "@type": "@id"
+    },
+    "BaseMiddleMississippianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddleMississippianUncertainty",
+      "@type": "@id"
+    },
+    "BaseMiddleOrdovician-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddleOrdovician-location",
+      "@type": "@id"
+    },
+    "BaseMiddleOrdovician-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddleOrdovician-position",
+      "@type": "@id"
+    },
+    "BaseMiddleOrdovicianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddleOrdovicianTime",
+      "@type": "@id"
+    },
+    "BaseMiddleOrdovicianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddleOrdovicianUncertainty",
+      "@type": "@id"
+    },
+    "BaseMiddlePennsylvanianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddlePennsylvanianTime",
+      "@type": "@id"
+    },
+    "BaseMiddlePennsylvanianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddlePennsylvanianUncertainty",
+      "@type": "@id"
+    },
+    "BaseMiddlePleistoceneTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddlePleistoceneTime",
+      "@type": "@id"
+    },
+    "BaseMiddleTriassicTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseMiddleTriassicTime",
+      "@type": "@id"
+    },
+    "BaseNeoarcheanTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseNeoarcheanTime",
+      "@type": "@id"
+    },
+    "BaseNeogene-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseNeogene-location",
+      "@type": "@id"
+    },
+    "BaseNeogene-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseNeogene-position",
+      "@type": "@id"
+    },
+    "BaseNeogeneTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseNeogeneTime",
+      "@type": "@id"
+    },
+    "BaseNeoproterozoicTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseNeoproterozoicTime",
+      "@type": "@id"
+    },
+    "BaseNorianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseNorianTime",
+      "@type": "@id"
+    },
+    "BaseNorianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseNorianUncertainty",
+      "@type": "@id"
+    },
+    "BaseOlenekianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseOlenekianTime",
+      "@type": "@id"
+    },
+    "BaseOlenekianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseOlenekianUncertainty",
+      "@type": "@id"
+    },
+    "BaseOligocene-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseOligocene-location",
+      "@type": "@id"
+    },
+    "BaseOligocene-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseOligocene-position",
+      "@type": "@id"
+    },
+    "BaseOligoceneTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseOligoceneTime",
+      "@type": "@id"
+    },
+    "BaseOligoceneUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseOligoceneUncertainty",
+      "@type": "@id"
+    },
+    "BaseOrdovician-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseOrdovician-location",
+      "@type": "@id"
+    },
+    "BaseOrdovician-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseOrdovician-position",
+      "@type": "@id"
+    },
+    "BaseOrdovicianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseOrdovicianTime",
+      "@type": "@id"
+    },
+    "BaseOrdovicianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseOrdovicianUncertainty",
+      "@type": "@id"
+    },
+    "BaseOrosirianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseOrosirianTime",
+      "@type": "@id"
+    },
+    "BasePaleoarcheanTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePaleoarcheanTime",
+      "@type": "@id"
+    },
+    "BasePennsylvanian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePennsylvanian-location",
+      "@type": "@id"
+    },
+    "BasePennsylvanian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePennsylvanian-position",
+      "@type": "@id"
+    },
+    "BasePennsylvanianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePennsylvanianTime",
+      "@type": "@id"
+    },
+    "BasePennsylvanianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePennsylvanianUncertainty",
+      "@type": "@id"
+    },
+    "BasePermian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePermian-location",
+      "@type": "@id"
+    },
+    "BasePermian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePermian-position",
+      "@type": "@id"
+    },
+    "BasePermianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePermianTime",
+      "@type": "@id"
+    },
+    "BasePermianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePermianUncertainty",
+      "@type": "@id"
+    },
+    "BasePhanerozoic-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePhanerozoic-location",
+      "@type": "@id"
+    },
+    "BasePhanerozoic-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePhanerozoic-position",
+      "@type": "@id"
+    },
+    "BasePhanerozoicTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePhanerozoicTime",
+      "@type": "@id"
+    },
+    "BasePhanerozoicUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePhanerozoicUncertainty",
+      "@type": "@id"
+    },
+    "BasePiacenz-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePiacenz-location",
+      "@type": "@id"
+    },
+    "BasePiacenz-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePiacenz-position",
+      "@type": "@id"
+    },
+    "BasePiacenzianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePiacenzianTime",
+      "@type": "@id"
+    },
+    "BasePliensbachian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePliensbachian-location",
+      "@type": "@id"
+    },
+    "BasePliensbachian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePliensbachian-position",
+      "@type": "@id"
+    },
+    "BasePliensbachianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePliensbachianTime",
+      "@type": "@id"
+    },
+    "BasePliensbachianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePliensbachianUncertainty",
+      "@type": "@id"
+    },
+    "BasePliocene-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePliocene-location",
+      "@type": "@id"
+    },
+    "BasePliocene-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePliocene-position",
+      "@type": "@id"
+    },
+    "BasePlioceneTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePlioceneTime",
+      "@type": "@id"
+    },
+    "BasePragian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePragian-location",
+      "@type": "@id"
+    },
+    "BasePragian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePragian-position",
+      "@type": "@id"
+    },
+    "BasePragianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePragianTime",
+      "@type": "@id"
+    },
+    "BasePragianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePragianUncertainty",
+      "@type": "@id"
+    },
+    "BasePriabonianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePriabonianTime",
+      "@type": "@id"
+    },
+    "BasePriabonianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePriabonianUncertainty",
+      "@type": "@id"
+    },
+    "BasePridoli-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePridoli-location",
+      "@type": "@id"
+    },
+    "BasePridoli-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePridoli-position",
+      "@type": "@id"
+    },
+    "BasePridoliPosition": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePridoliPosition",
+      "@type": "@id"
+    },
+    "BasePridoliUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BasePridoliUncertainty",
+      "@type": "@id"
+    },
+    "BaseProterozoicTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseProterozoicTime",
+      "@type": "@id"
+    },
+    "BaseQuaternary-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseQuaternary-location",
+      "@type": "@id"
+    },
+    "BaseQuaternary-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseQuaternary-position",
+      "@type": "@id"
+    },
+    "BaseQuaternaryTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseQuaternaryTime",
+      "@type": "@id"
+    },
+    "BaseRhaetianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseRhaetianTime",
+      "@type": "@id"
+    },
+    "BaseRhaetianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseRhaetianUncertainty",
+      "@type": "@id"
+    },
+    "BaseRhyacianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseRhyacianTime",
+      "@type": "@id"
+    },
+    "BaseSakmarianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseSakmarianTime",
+      "@type": "@id"
+    },
+    "BaseSakmarianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseSakmarianUncertainty",
+      "@type": "@id"
+    },
+    "BaseSantonianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseSantonianTime",
+      "@type": "@id"
+    },
+    "BaseSantonianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseSantonianUncertainty",
+      "@type": "@id"
+    },
+    "BaseSelandian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseSelandian-location",
+      "@type": "@id"
+    },
+    "BaseSelandian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseSelandian-position",
+      "@type": "@id"
+    },
+    "BaseSelandianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseSelandianTime",
+      "@type": "@id"
+    },
+    "BaseSerravallian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseSerravallian-location",
+      "@type": "@id"
+    },
+    "BaseSerravallian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseSerravallian-position",
+      "@type": "@id"
+    },
+    "BaseSerravallianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseSerravallianTime",
+      "@type": "@id"
+    },
+    "BaseSilurian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseSilurian-location",
+      "@type": "@id"
+    },
+    "BaseSilurian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseSilurian-position",
+      "@type": "@id"
+    },
+    "BaseSilurianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseSilurianTime",
+      "@type": "@id"
+    },
+    "BaseSilurianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseSilurianUncertainty",
+      "@type": "@id"
+    },
+    "BaseSinemurian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseSinemurian-location",
+      "@type": "@id"
+    },
+    "BaseSinemurian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseSinemurian-position",
+      "@type": "@id"
+    },
+    "BaseSinemurianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseSinemurianTime",
+      "@type": "@id"
+    },
+    "BaseSinemurianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseSinemurianUncertainty",
+      "@type": "@id"
+    },
+    "BaseStatherianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseStatherianTime",
+      "@type": "@id"
+    },
+    "BaseStenianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseStenianTime",
+      "@type": "@id"
+    },
+    "BaseTelychianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseTelychianTime",
+      "@type": "@id"
+    },
+    "BaseTelychianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseTelychianUncertainty",
+      "@type": "@id"
+    },
+    "BaseThanetian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseThanetian-location",
+      "@type": "@id"
+    },
+    "BaseThanetian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseThanetian-position",
+      "@type": "@id"
+    },
+    "BaseThanetianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseThanetianTime",
+      "@type": "@id"
+    },
+    "BaseThanetianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseThanetianUncertainty",
+      "@type": "@id"
+    },
+    "BaseTithonianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseTithonianTime",
+      "@type": "@id"
+    },
+    "BaseTithonianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseTithonianUncertainty",
+      "@type": "@id"
+    },
+    "BaseToarcianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseToarcianTime",
+      "@type": "@id"
+    },
+    "BaseToarcianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseToarcianUncertainty",
+      "@type": "@id"
+    },
+    "BaseTortonian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseTortonian-location",
+      "@type": "@id"
+    },
+    "BaseTortonian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseTortonian-position",
+      "@type": "@id"
+    },
+    "BaseTortonianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseTortonianTime",
+      "@type": "@id"
+    },
+    "BaseTuronian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseTuronian-location",
+      "@type": "@id"
+    },
+    "BaseTuronian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseTuronian-position",
+      "@type": "@id"
+    },
+    "BaseTuronianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseTuronianTime",
+      "@type": "@id"
+    },
+    "BaseTuronianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseTuronianUncertainty",
+      "@type": "@id"
+    },
+    "BaseUpperCretaceous-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperCretaceous-location",
+      "@type": "@id"
+    },
+    "BaseUpperCretaceous-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperCretaceous-position",
+      "@type": "@id"
+    },
+    "BaseUpperCretaceousTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperCretaceousTime",
+      "@type": "@id"
+    },
+    "BaseUpperCretaceousUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperCretaceousUncertainty",
+      "@type": "@id"
+    },
+    "BaseUpperDevonian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperDevonian-location",
+      "@type": "@id"
+    },
+    "BaseUpperDevonian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperDevonian-position",
+      "@type": "@id"
+    },
+    "BaseUpperDevonianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperDevonianTime",
+      "@type": "@id"
+    },
+    "BaseUpperDevonianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperDevonianUncertainty",
+      "@type": "@id"
+    },
+    "BaseUpperJurassicTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperJurassicTime",
+      "@type": "@id"
+    },
+    "BaseUpperJurassicUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperJurassicUncertainty",
+      "@type": "@id"
+    },
+    "BaseUpperMississippianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperMississippianTime",
+      "@type": "@id"
+    },
+    "BaseUpperMississippianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperMississippianUncertainty",
+      "@type": "@id"
+    },
+    "BaseUpperOrdovician-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperOrdovician-location",
+      "@type": "@id"
+    },
+    "BaseUpperOrdovician-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperOrdovician-position",
+      "@type": "@id"
+    },
+    "BaseUpperOrdovicianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperOrdovicianTime",
+      "@type": "@id"
+    },
+    "BaseUpperOrdovicianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperOrdovicianUncertainty",
+      "@type": "@id"
+    },
+    "BaseUpperPennsylvanianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperPennsylvanianTime",
+      "@type": "@id"
+    },
+    "BaseUpperPennsylvanianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperPennsylvanianUncertainty",
+      "@type": "@id"
+    },
+    "BaseUpperPleistoceneTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperPleistoceneTime",
+      "@type": "@id"
+    },
+    "BaseUpperTriassic-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperTriassic-location",
+      "@type": "@id"
+    },
+    "BaseUpperTriassic-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperTriassic-position",
+      "@type": "@id"
+    },
+    "BaseUpperTriassicTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseUpperTriassicTime",
+      "@type": "@id"
+    },
+    "BaseValanginianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseValanginianTime",
+      "@type": "@id"
+    },
+    "BaseValanginianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseValanginianUncertainty",
+      "@type": "@id"
+    },
+    "BaseWenlock-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseWenlock-location",
+      "@type": "@id"
+    },
+    "BaseWenlock-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseWenlock-position",
+      "@type": "@id"
+    },
+    "BaseWenlockTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseWenlockTime",
+      "@type": "@id"
+    },
+    "BaseWenlockUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseWenlockUncertainty",
+      "@type": "@id"
+    },
+    "BaseWordian-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseWordian-location",
+      "@type": "@id"
+    },
+    "BaseWordian-position": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseWordian-position",
+      "@type": "@id"
+    },
+    "BaseWordianTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseWordianTime",
+      "@type": "@id"
+    },
+    "BaseWordianUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseWordianUncertainty",
+      "@type": "@id"
+    },
+    "Bashkirian": {
+      "@id": "http://dbpedia.org/resource/Bashkirian",
+      "@type": "@id"
+    },
+    "Bathonian": {
+      "@id": "http://dbpedia.org/resource/Bathonian",
+      "@type": "@id"
+    },
+    "Berriasian": {
+      "@id": "http://dbpedia.org/resource/Berriasian",
+      "@type": "@id"
+    },
+    "Boundaries": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/Boundaries",
+      "@type": "@id"
+    },
+    "Burdigalian": {
+      "@id": "http://dbpedia.org/resource/Burdigalian",
+      "@type": "@id"
+    },
+    "Calabrian": {
+      "@id": "http://dbpedia.org/resource/Calabrian",
+      "@type": "@id"
+    },
+    "Callovian": {
+      "@id": "http://dbpedia.org/resource/Callovian",
+      "@type": "@id"
+    },
+    "Calymmian": {
+      "@id": "http://dbpedia.org/resource/Calymmian",
+      "@type": "@id"
+    },
+    "Cambrian": {
+      "@id": "http://dbpedia.org/resource/Cambrian",
+      "@type": "@id"
+    },
+    "CambrianSeries2": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/CambrianSeries2",
+      "@type": "@id"
+    },
+    "CambrianSeries3": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/CambrianSeries3",
+      "@type": "@id"
+    },
+    "CambrianStage10": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/CambrianStage10",
+      "@type": "@id"
+    },
+    "CambrianStage2": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/CambrianStage2",
+      "@type": "@id"
+    },
+    "CambrianStage3": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/CambrianStage3",
+      "@type": "@id"
+    },
+    "CambrianStage4": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/CambrianStage4",
+      "@type": "@id"
+    },
+    "CambrianStage5": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/CambrianStage5",
+      "@type": "@id"
+    },
+    "Campanian": {
+      "@id": "http://dbpedia.org/resource/Campanian",
+      "@type": "@id"
+    },
+    "Capitanian": {
+      "@id": "http://dbpedia.org/resource/Capitanian",
+      "@type": "@id"
+    },
+    "Carboniferous": {
+      "@id": "http://dbpedia.org/resource/Carboniferous",
+      "@type": "@id"
+    },
+    "Carnian": {
+      "@id": "http://dbpedia.org/resource/Carnian",
+      "@type": "@id"
+    },
+    "Cenomanian": {
+      "@id": "http://dbpedia.org/resource/Cenomanian",
+      "@type": "@id"
+    },
+    "Cenozoic": {
+      "@id": "http://dbpedia.org/resource/Cenozoic",
+      "@type": "@id"
+    },
+    "Changhsingian": {
+      "@id": "http://dbpedia.org/resource/Changhsingian",
+      "@type": "@id"
+    },
+    "Chattian": {
+      "@id": "http://dbpedia.org/resource/Chattian",
+      "@type": "@id"
+    },
+    "Cisuralian": {
+      "@id": "http://dbpedia.org/resource/Cisuralian",
+      "@type": "@id"
+    },
+    "Coniacian": {
+      "@id": "http://dbpedia.org/resource/Coniacian",
+      "@type": "@id"
+    },
+    "Cretaceous": {
+      "@id": "http://dbpedia.org/resource/Cretaceous",
+      "@type": "@id"
+    },
+    "Cryogenian": {
+      "@id": "http://dbpedia.org/resource/Cryogenian",
+      "@type": "@id"
+    },
+    "Danian": {
+      "@id": "http://dbpedia.org/resource/Danian",
+      "@type": "@id"
+    },
+    "Dapingian": {
+      "@id": "http://dbpedia.org/resource/Dapingian",
+      "@type": "@id"
+    },
+    "Darriwilian": {
+      "@id": "http://dbpedia.org/resource/Darriwilian",
+      "@type": "@id"
+    },
+    "Devonian": {
+      "@id": "http://dbpedia.org/resource/Devonian",
+      "@type": "@id"
+    },
+    "Drumian": {
+      "@id": "http://dbpedia.org/resource/Drumian",
+      "@type": "@id"
+    },
+    "Ectasian": {
+      "@id": "http://dbpedia.org/resource/Ectasian",
+      "@type": "@id"
+    },
+    "Ediacaran": {
+      "@id": "http://dbpedia.org/resource/Ediacaran",
+      "@type": "@id"
+    },
+    "Eifelian": {
+      "@id": "http://dbpedia.org/resource/Eifelian",
+      "@type": "@id"
+    },
+    "Emsian": {
+      "@id": "http://dbpedia.org/resource/Emsian",
+      "@type": "@id"
+    },
+    "Eoarchean": {
+      "@id": "http://dbpedia.org/resource/Eoarchean",
+      "@type": "@id"
+    },
+    "Eocene": {
+      "@id": "http://dbpedia.org/resource/Eocene",
+      "@type": "@id"
+    },
+    "Eras": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/Eras",
+      "@type": "@id"
+    },
+    "Famennian": {
+      "@id": "http://dbpedia.org/resource/Famennian",
+      "@type": "@id"
+    },
+    "Floian": {
+      "@id": "http://dbpedia.org/resource/Floian",
+      "@type": "@id"
+    },
+    "FormationOfEarthUncertainty": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/FormationOfEarthUncertainty",
+      "@type": "@id"
+    },
+    "FormationOfEarth": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/FormationOfEarth",
+      "@type": "@id"
+    },
+    "FormationOfEarthTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/FormationOfEarthTime",
+      "@type": "@id"
+    },
+    "Fortunian": {
+      "@id": "http://dbpedia.org/resource/Fortunian",
+      "@type": "@id"
+    },
+    "Frasnian": {
+      "@id": "http://dbpedia.org/resource/Frasnian",
+      "@type": "@id"
+    },
+    "Furongian": {
+      "@id": "http://dbpedia.org/resource/Furongian",
+      "@type": "@id"
+    },
+    "GSSPBaseAeronian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseAeronian",
+      "@type": "@id"
+    },
+    "GSSPBaseAquitanian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseAquitanian",
+      "@type": "@id"
+    },
+    "GSSPBaseBajocian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseBajocian",
+      "@type": "@id"
+    },
+    "GSSPBaseBathonian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseBathonian",
+      "@type": "@id"
+    },
+    "GSSPBaseCalabrian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseCalabrian",
+      "@type": "@id"
+    },
+    "GSSPBaseCapitanian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseCapitanian",
+      "@type": "@id"
+    },
+    "GSSPBaseCarboniferous": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseCarboniferous",
+      "@type": "@id"
+    },
+    "GSSPBaseCenozoic": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseCenozoic",
+      "@type": "@id"
+    },
+    "GSSPBaseChanghsingian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseChanghsingian",
+      "@type": "@id"
+    },
+    "GSSPBaseDarriwilian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseDarriwilian",
+      "@type": "@id"
+    },
+    "GSSPBaseDevonian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseDevonian",
+      "@type": "@id"
+    },
+    "GSSPBaseEdiacaran": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseEdiacaran",
+      "@type": "@id"
+    },
+    "GSSPBaseEmsian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseEmsian",
+      "@type": "@id"
+    },
+    "GSSPBaseEocene": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseEocene",
+      "@type": "@id"
+    },
+    "GSSPBaseFamennian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseFamennian",
+      "@type": "@id"
+    },
+    "GSSPBaseFloian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseFloian",
+      "@type": "@id"
+    },
+    "GSSPBaseFurongian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseFurongian",
+      "@type": "@id"
+    },
+    "GSSPBaseGivetian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseGivetian",
+      "@type": "@id"
+    },
+    "GSSPBaseGuadalupian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseGuadalupian",
+      "@type": "@id"
+    },
+    "GSSPBaseDrumian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseDrumian",
+      "@type": "@id"
+    },
+    "GSSPBaseGuzhangian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseGuzhangian",
+      "@type": "@id"
+    },
+    "GSSPBaseHirnantian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseHirnantian",
+      "@type": "@id"
+    },
+    "GSSPBaseHolocene": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseHolocene",
+      "@type": "@id"
+    },
+    "GSSPBaseHomerian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseHomerian",
+      "@type": "@id"
+    },
+    "GSSPBaseJurassic": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseJurassic",
+      "@type": "@id"
+    },
+    "GSSPBaseKatian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseKatian",
+      "@type": "@id"
+    },
+    "GSSPBaseLadinian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseLadinian",
+      "@type": "@id"
+    },
+    "GSSPBaseLopingian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseLopingian",
+      "@type": "@id"
+    },
+    "GSSPBaseLudfordian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseLudfordian",
+      "@type": "@id"
+    },
+    "GSSPBaseLudlow": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseLudlow",
+      "@type": "@id"
+    },
+    "GSSPBaseMaastrichtian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseMaastrichtian",
+      "@type": "@id"
+    },
+    "GSSPBaseMesozoic": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseMesozoic",
+      "@type": "@id"
+    },
+    "GSSPBaseMessinian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseMessinian",
+      "@type": "@id"
+    },
+    "GSSPBaseMiddleDevonian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseMiddleDevonian",
+      "@type": "@id"
+    },
+    "GSSPBaseMiddleJurassic": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseMiddleJurassic",
+      "@type": "@id"
+    },
+    "GSSPBaseMiddleMississippian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseMiddleMississippian",
+      "@type": "@id"
+    },
+    "GSSPBaseMiddleOrdovician": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseMiddleOrdovician",
+      "@type": "@id"
+    },
+    "GSSPBaseNeogene": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseNeogene",
+      "@type": "@id"
+    },
+    "GSSPBaseOligocene": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseOligocene",
+      "@type": "@id"
+    },
+    "GSSPBaseOrdovician": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseOrdovician",
+      "@type": "@id"
+    },
+    "GSSPBasePennsylvanian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBasePennsylvanian",
+      "@type": "@id"
+    },
+    "GSSPBasePermian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBasePermian",
+      "@type": "@id"
+    },
+    "GSSPBasePhanerozoic": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBasePhanerozoic",
+      "@type": "@id"
+    },
+    "GSSPBasePiacenz": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBasePiacenz",
+      "@type": "@id"
+    },
+    "GSSPBasePliensbachian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBasePliensbachian",
+      "@type": "@id"
+    },
+    "GSSPBasePliocene": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBasePliocene",
+      "@type": "@id"
+    },
+    "GSSPBasePragian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBasePragian",
+      "@type": "@id"
+    },
+    "GSSPBasePridoli": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBasePridoli",
+      "@type": "@id"
+    },
+    "GSSPBaseQuaternary": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseQuaternary",
+      "@type": "@id"
+    },
+    "GSSPBaseSelandian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseSelandian",
+      "@type": "@id"
+    },
+    "GSSPBaseSerravallian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseSerravallian",
+      "@type": "@id"
+    },
+    "GSSPBaseSilurian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseSilurian",
+      "@type": "@id"
+    },
+    "GSSPBaseSinemurian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseSinemurian",
+      "@type": "@id"
+    },
+    "GSSPBaseThanetian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseThanetian",
+      "@type": "@id"
+    },
+    "GSSPBaseTortonian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseTortonian",
+      "@type": "@id"
+    },
+    "GSSPBaseTuronian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseTuronian",
+      "@type": "@id"
+    },
+    "GSSPBaseUpperCretaceous": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseUpperCretaceous",
+      "@type": "@id"
+    },
+    "GSSPBaseUpperDevonian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseUpperDevonian",
+      "@type": "@id"
+    },
+    "GSSPBaseUpperOrdovician": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseUpperOrdovician",
+      "@type": "@id"
+    },
+    "GSSPBaseUpperTriassic": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseUpperTriassic",
+      "@type": "@id"
+    },
+    "GSSPBaseWenlock": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseWenlock",
+      "@type": "@id"
+    },
+    "GSSPBaseWordian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/GSSPBaseWordian",
+      "@type": "@id"
+    },
+    "Gelasian": {
+      "@id": "http://dbpedia.org/resource/Gelasian",
+      "@type": "@id"
+    },
+    "Givetian": {
+      "@id": "http://dbpedia.org/resource/Givetian",
+      "@type": "@id"
+    },
+    "Gorstian": {
+      "@id": "http://dbpedia.org/resource/Gorstian",
+      "@type": "@id"
+    },
+    "Guadalupian": {
+      "@id": "http://dbpedia.org/resource/Guadalupian",
+      "@type": "@id"
+    },
+    "Guzhangian": {
+      "@id": "http://dbpedia.org/resource/Guzhangian",
+      "@type": "@id"
+    },
+    "Gzhelian": {
+      "@id": "http://dbpedia.org/resource/Gzhelian",
+      "@type": "@id"
+    },
+    "Hadean": {
+      "@id": "http://dbpedia.org/resource/Hadean",
+      "@type": "@id"
+    },
+    "Hauterivian": {
+      "@id": "http://dbpedia.org/resource/Hauterivian",
+      "@type": "@id"
+    },
+    "Hettangian": {
+      "@id": "http://dbpedia.org/resource/Hettangian",
+      "@type": "@id"
+    },
+    "Hirnantian": {
+      "@id": "http://dbpedia.org/resource/Hirnantian",
+      "@type": "@id"
+    },
+    "Holocene": {
+      "@id": "http://dbpedia.org/resource/Holocene",
+      "@type": "@id"
+    },
+    "Homerian": {
+      "@id": "http://dbpedia.org/resource/Homerian",
+      "@type": "@id"
+    },
+    "Induan": {
+      "@id": "http://dbpedia.org/resource/Induan",
+      "@type": "@id"
+    },
+    "2012": {
+      "@id": "http://resource.geosciml.org/classifierscheme/ics/ischart/2012",
+      "@type": "@id"
+    },
+    "Ionian": {
+      "@id": "http://dbpedia.org/resource/Ionian",
+      "@type": "@id"
+    },
+    "Jiangshanian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/Jiangshanian",
+      "@type": "@id"
+    },
+    "Jurassic": {
+      "@id": "http://dbpedia.org/resource/Jurassic",
+      "@type": "@id"
+    },
+    "Kasimovian": {
+      "@id": "http://dbpedia.org/resource/Kasimovian",
+      "@type": "@id"
+    },
+    "Katian": {
+      "@id": "http://dbpedia.org/resource/Katian",
+      "@type": "@id"
+    },
+    "Kimmeridgian": {
+      "@id": "http://dbpedia.org/resource/Kimmeridgian",
+      "@type": "@id"
+    },
+    "Kungurian": {
+      "@id": "http://dbpedia.org/resource/Kungurian",
+      "@type": "@id"
+    },
+    "Ladinian": {
+      "@id": "http://dbpedia.org/resource/Ladinian",
+      "@type": "@id"
+    },
+    "Langhian": {
+      "@id": "http://dbpedia.org/resource/Langhian",
+      "@type": "@id"
+    },
+    "Llandovery": {
+      "@id": "http://dbpedia.org/resource/Llandovery",
+      "@type": "@id"
+    },
+    "BaseHolocene-location": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/BaseHolocene-location",
+      "@type": "@id"
+    },
+    "Lochkovian": {
+      "@id": "http://dbpedia.org/resource/Lochkovian",
+      "@type": "@id"
+    },
+    "Lopingian": {
+      "@id": "http://dbpedia.org/resource/Lopingian",
+      "@type": "@id"
+    },
+    "LowerCretaceous": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/LowerCretaceous",
+      "@type": "@id"
+    },
+    "LowerDevonian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/LowerDevonian",
+      "@type": "@id"
+    },
+    "LowerJurassic": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/LowerJurassic",
+      "@type": "@id"
+    },
+    "LowerMississippian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/LowerMississippian",
+      "@type": "@id"
+    },
+    "LowerOrdovician": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/LowerOrdovician",
+      "@type": "@id"
+    },
+    "LowerPennsylvanian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/LowerPennsylvanian",
+      "@type": "@id"
+    },
+    "LowerTriassic": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/LowerTriassic",
+      "@type": "@id"
+    },
+    "Ludfordian": {
+      "@id": "http://dbpedia.org/resource/Ludfordian",
+      "@type": "@id"
+    },
+    "Ludlow": {
+      "@id": "http://dbpedia.org/resource/Ludlow",
+      "@type": "@id"
+    },
+    "Lutetian": {
+      "@id": "http://dbpedia.org/resource/Lutetian",
+      "@type": "@id"
+    },
+    "Maastrichtian": {
+      "@id": "http://dbpedia.org/resource/Maastrichtian",
+      "@type": "@id"
+    },
+    "Mesoarchean": {
+      "@id": "http://dbpedia.org/resource/Mesoarchean",
+      "@type": "@id"
+    },
+    "Mesoproterozoic": {
+      "@id": "http://dbpedia.org/resource/Mesoproterozoic",
+      "@type": "@id"
+    },
+    "Mesozoic": {
+      "@id": "http://dbpedia.org/resource/Mesozoic",
+      "@type": "@id"
+    },
+    "Messinian": {
+      "@id": "http://dbpedia.org/resource/Messinian",
+      "@type": "@id"
+    },
+    "MiddleDevonian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/MiddleDevonian",
+      "@type": "@id"
+    },
+    "MiddleJurassic": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/MiddleJurassic",
+      "@type": "@id"
+    },
+    "MiddleMississippian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/MiddleMississippian",
+      "@type": "@id"
+    },
+    "MiddleOrdovician": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/MiddleOrdovician",
+      "@type": "@id"
+    },
+    "MiddlePennsylvanian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/MiddlePennsylvanian",
+      "@type": "@id"
+    },
+    "MiddlePleistocene": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/MiddlePleistocene",
+      "@type": "@id"
+    },
+    "MiddleTriassic": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/MiddleTriassic",
+      "@type": "@id"
+    },
+    "Miocene": {
+      "@id": "http://dbpedia.org/resource/Miocene",
+      "@type": "@id"
+    },
+    "Mississippian": {
+      "@id": "http://dbpedia.org/resource/Mississippian",
+      "@type": "@id"
+    },
+    "Moscovian": {
+      "@id": "http://dbpedia.org/resource/Moscovian",
+      "@type": "@id"
+    },
+    "Neoarchean": {
+      "@id": "http://dbpedia.org/resource/Neoarchean",
+      "@type": "@id"
+    },
+    "Neogene": {
+      "@id": "http://dbpedia.org/resource/Neogene",
+      "@type": "@id"
+    },
+    "Neoproterozoic": {
+      "@id": "http://dbpedia.org/resource/Neoproterozoic",
+      "@type": "@id"
+    },
+    "Norian": {
+      "@id": "http://dbpedia.org/resource/Norian",
+      "@type": "@id"
+    },
+    "NorwegianContinentalShelf": {
+      "@id": "http://sws.ifi.uio.no/vocab/npd-v2#NorwegianContinentalShelf",
+      "@type": "@id"
+    },
+    "Olenekian": {
+      "@id": "http://dbpedia.org/resource/Olenekian",
+      "@type": "@id"
+    },
+    "Oligocene": {
+      "@id": "http://dbpedia.org/resource/Oligocene",
+      "@type": "@id"
+    },
+    "Ordovician": {
+      "@id": "http://dbpedia.org/resource/Ordovician",
+      "@type": "@id"
+    },
+    "Orosirian": {
+      "@id": "http://dbpedia.org/resource/Orosirian",
+      "@type": "@id"
+    },
+    "Oxfordian": {
+      "@id": "http://dbpedia.org/resource/Oxfordian",
+      "@type": "@id"
+    },
+    "Paibian": {
+      "@id": "http://dbpedia.org/resource/Paibian",
+      "@type": "@id"
+    },
+    "Paleoarchean": {
+      "@id": "http://dbpedia.org/resource/Paleoarchean",
+      "@type": "@id"
+    },
+    "Paleocene": {
+      "@id": "http://dbpedia.org/resource/Paleocene",
+      "@type": "@id"
+    },
+    "Paleogene": {
+      "@id": "http://dbpedia.org/resource/Paleogene",
+      "@type": "@id"
+    },
+    "Paleoproterozoic": {
+      "@id": "http://dbpedia.org/resource/Paleoproterozoic",
+      "@type": "@id"
+    },
+    "Paleozoic": {
+      "@id": "http://dbpedia.org/resource/Paleozoic",
+      "@type": "@id"
+    },
+    "Pennsylvanian": {
+      "@id": "http://dbpedia.org/resource/Pennsylvanian",
+      "@type": "@id"
+    },
+    "Permian": {
+      "@id": "http://dbpedia.org/resource/Permian",
+      "@type": "@id"
+    },
+    "Phanerozoic": {
+      "@id": "http://dbpedia.org/resource/Phanerozoic",
+      "@type": "@id"
+    },
+    "Piacenzian": {
+      "@id": "http://dbpedia.org/resource/Piacenzian",
+      "@type": "@id"
+    },
+    "Pleistocene": {
+      "@id": "http://dbpedia.org/resource/Pleistocene",
+      "@type": "@id"
+    },
+    "Pliensbachian": {
+      "@id": "http://dbpedia.org/resource/Pliensbachian",
+      "@type": "@id"
+    },
+    "Pliocene": {
+      "@id": "http://dbpedia.org/resource/Pliocene",
+      "@type": "@id"
+    },
+    "Pragian": {
+      "@id": "http://dbpedia.org/resource/Pragian",
+      "@type": "@id"
+    },
+    "Precambrian": {
+      "@id": "http://dbpedia.org/resource/Precambrian",
+      "@type": "@id"
+    },
+    "PresentTime": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/PresentTime",
+      "@type": "@id"
+    },
+    "Priabonian": {
+      "@id": "http://dbpedia.org/resource/Priabonian",
+      "@type": "@id"
+    },
+    "Pridoli": {
+      "@id": "http://dbpedia.org/resource/Pridoli",
+      "@type": "@id"
+    },
+    "Proterozoic": {
+      "@id": "http://dbpedia.org/resource/Proterozoic",
+      "@type": "@id"
+    },
+    "Quaternary": {
+      "@id": "http://dbpedia.org/resource/Quaternary",
+      "@type": "@id"
+    },
+    "Rhaetian": {
+      "@id": "http://dbpedia.org/resource/Rhaetian",
+      "@type": "@id"
+    },
+    "Rhuddanian": {
+      "@id": "http://dbpedia.org/resource/Rhuddanian",
+      "@type": "@id"
+    },
+    "Rhyacian": {
+      "@id": "http://dbpedia.org/resource/Rhyacian",
+      "@type": "@id"
+    },
+    "Roadian": {
+      "@id": "http://dbpedia.org/resource/Roadian",
+      "@type": "@id"
+    },
+    "Rupelian": {
+      "@id": "http://dbpedia.org/resource/Rupelian",
+      "@type": "@id"
+    },
+    "Sakmarian": {
+      "@id": "http://dbpedia.org/resource/Sakmarian",
+      "@type": "@id"
+    },
+    "Sandbian": {
+      "@id": "http://dbpedia.org/resource/Sandbian",
+      "@type": "@id"
+    },
+    "Santonian": {
+      "@id": "http://dbpedia.org/resource/Santonian",
+      "@type": "@id"
+    },
+    "Selandian": {
+      "@id": "http://dbpedia.org/resource/Selandian",
+      "@type": "@id"
+    },
+    "Serpukhovian": {
+      "@id": "http://dbpedia.org/resource/Serpukhovian",
+      "@type": "@id"
+    },
+    "Serravallian": {
+      "@id": "http://dbpedia.org/resource/Serravallian",
+      "@type": "@id"
+    },
+    "Sheinwoodian": {
+      "@id": "http://dbpedia.org/resource/Sheinwoodian",
+      "@type": "@id"
+    },
+    "Siderian": {
+      "@id": "http://dbpedia.org/resource/Siderian",
+      "@type": "@id"
+    },
+    "Silurian": {
+      "@id": "http://dbpedia.org/resource/Silurian",
+      "@type": "@id"
+    },
+    "Sinemurian": {
+      "@id": "http://dbpedia.org/resource/Sinemurian",
+      "@type": "@id"
+    },
+    "Statherian": {
+      "@id": "http://dbpedia.org/resource/Statherian",
+      "@type": "@id"
+    },
+    "Stenian": {
+      "@id": "http://dbpedia.org/resource/Stenian",
+      "@type": "@id"
+    },
+    "Telychian": {
+      "@id": "http://dbpedia.org/resource/Telychian",
+      "@type": "@id"
+    },
+    "Terreneuvian": {
+      "@id": "http://dbpedia.org/resource/Terreneuvian",
+      "@type": "@id"
+    },
+    "Thanetian": {
+      "@id": "http://dbpedia.org/resource/Thanetian",
+      "@type": "@id"
+    },
+    "Present": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/Present",
+      "@type": "@id"
+    },
+    "Tithonian": {
+      "@id": "http://dbpedia.org/resource/Tithonian",
+      "@type": "@id"
+    },
+    "Toarcian": {
+      "@id": "http://dbpedia.org/resource/Toarcian",
+      "@type": "@id"
+    },
+    "Tonian": {
+      "@id": "http://dbpedia.org/resource/Tonian",
+      "@type": "@id"
+    },
+    "Tortonian": {
+      "@id": "http://dbpedia.org/resource/Tortonian",
+      "@type": "@id"
+    },
+    "Tournaisian": {
+      "@id": "http://dbpedia.org/resource/Tournaisian",
+      "@type": "@id"
+    },
+    "Tremadocian": {
+      "@id": "http://dbpedia.org/resource/Tremadocian",
+      "@type": "@id"
+    },
+    "Triassic": {
+      "@id": "http://dbpedia.org/resource/Triassic",
+      "@type": "@id"
+    },
+    "Turonian": {
+      "@id": "http://dbpedia.org/resource/Turonian",
+      "@type": "@id"
+    },
+    "UpperCretaceous": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/UpperCretaceous",
+      "@type": "@id"
+    },
+    "UpperDevonian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/UpperDevonian",
+      "@type": "@id"
+    },
+    "UpperJurassic": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/UpperJurassic",
+      "@type": "@id"
+    },
+    "UpperMississippian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/UpperMississippian",
+      "@type": "@id"
+    },
+    "UpperOrdovician": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/UpperOrdovician",
+      "@type": "@id"
+    },
+    "UpperPennsylvanian": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/UpperPennsylvanian",
+      "@type": "@id"
+    },
+    "UpperPleistocene": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/UpperPleistocene",
+      "@type": "@id"
+    },
+    "UpperTriassic": {
+      "@id": "http://resource.geosciml.org/classifier/ics/ischart/UpperTriassic",
+      "@type": "@id"
+    },
+    "Valanginian": {
+      "@id": "http://dbpedia.org/resource/Valanginian",
+      "@type": "@id"
+    },
+    "Visean": {
+      "@id": "http://dbpedia.org/resource/Visean",
+      "@type": "@id"
+    },
+    "Wenlock": {
+      "@id": "http://dbpedia.org/resource/Wenlock",
+      "@type": "@id"
+    },
+    "Wordian": {
+      "@id": "http://dbpedia.org/resource/Wordian",
+      "@type": "@id"
+    },
+    "Wuchiapingian": {
+      "@id": "http://dbpedia.org/resource/Wuchiapingian",
+      "@type": "@id"
+    },
+    "Ypresian": {
+      "@id": "http://dbpedia.org/resource/Ypresian",
+      "@type": "@id"
+    },
+    "Zanclean": {
+      "@id": "http://dbpedia.org/resource/Zanclean",
+      "@type": "@id"
+    }
+  }
+}

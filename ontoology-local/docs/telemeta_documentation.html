@@ -1,0 +1,429 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>telemeta - Ontology Documentation</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .toc {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .toc li {
+            margin: 0.5rem 0;
+        }
+        .toc a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        .metadata-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.5rem 1rem;
+            margin-bottom: 1rem;
+        }
+        .metadata-label {
+            font-weight: 600;
+            color: #495057;
+        }
+        .namespace-table {
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="doc-header">
+        <h1>telemeta</h1>
+        
+        
+        <div class="metadata-grid">
+            
+            <span class="metadata-label">Ontology URI:</span>
+            <span><a href="http://www.microsoft.com/telemeta.owl" class="uri-link">http://www.microsoft.com/telemeta.owl</a></span>
+            
+            
+            
+            
+            
+            
+            
+        </div>
+        
+        
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-number">7</span>
+                <span class="stat-label">Classes</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">1</span>
+                <span class="stat-label">Object Properties</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">1</span>
+                <span class="stat-label">Datatype Properties</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">0</span>
+                <span class="stat-label">Individuals</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="doc-content">
+        <div class="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                
+                <li><a href="#classes">Classes (5)</a></li>
+                
+                
+                <li><a href="#object-properties">Object Properties (1)</a></li>
+                
+                
+                <li><a href="#datatype-properties">Datatype Properties (1)</a></li>
+                
+                
+                
+                
+                <li><a href="#namespaces">Namespaces</a></li>
+                
+            </ul>
+        </div>
+        
+        
+        <div class="section" id="classes">
+            <h2>Classes</h2>
+            <table class="entity-table">
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Label</th>
+                        <th>Description</th>
+                        <th>Superclasses</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td><a href="http://www.microsoft.com/telemeta.owl#Operation" class="uri-link">Operation</a></td>
+                        <td>Operation</td>
+                        <td></td>
+                        <td>
+                            
+                            <a href="http://www.w3.org/2002/07/owl#Thing" class="uri-link">Thing</a>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="http://www.microsoft.com/telemeta.owl#Read" class="uri-link">Read</a></td>
+                        <td>Read</td>
+                        <td></td>
+                        <td>
+                            
+                            <a href="http://www.microsoft.com/telemeta.owl#Operation" class="uri-link">Operation</a>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="http://www.microsoft.com/telemeta.owl#ReadA" class="uri-link">ReadA</a></td>
+                        <td>ReadA</td>
+                        <td></td>
+                        <td>
+                            
+                            <a href="http://www.microsoft.com/telemeta.owl#Operation" class="uri-link">Operation</a>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="http://www.microsoft.com/telemeta.owl#Service" class="uri-link">Service</a></td>
+                        <td>Service</td>
+                        <td></td>
+                        <td>
+                            
+                            <a href="http://www.w3.org/2002/07/owl#Thing" class="uri-link">Thing</a>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="http://www.microsoft.com/telemeta.owl#Write" class="uri-link">Write</a></td>
+                        <td>Write</td>
+                        <td></td>
+                        <td>
+                            
+                            <a href="http://www.microsoft.com/telemeta.owl#Operation" class="uri-link">Operation</a>
+                            
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+        
+        
+        
+        <div class="section" id="object-properties">
+            <h2>Object Properties</h2>
+            <table class="entity-table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Label</th>
+                        <th>Description</th>
+                        <th>Domain</th>
+                        <th>Range</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td><a href="http://www.microsoft.com/telemeta.owl#hasOperation" class="uri-link">hasOperation</a></td>
+                        <td>hasOperation</td>
+                        <td></td>
+                        <td>
+                            
+                            <a href="http://www.microsoft.com/telemeta.owl#Service" class="uri-link">Service</a>
+                            
+                        </td>
+                        <td>
+                            
+                            <a href="http://www.microsoft.com/telemeta.owl#Operation" class="uri-link">Operation</a>
+                            
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+        
+        
+        
+        <div class="section" id="datatype-properties">
+            <h2>Datatype Properties</h2>
+            <table class="entity-table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Label</th>
+                        <th>Description</th>
+                        <th>Domain</th>
+                        <th>Range</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td><a href="http://www.microsoft.com/telemeta.owl#hasName" class="uri-link">hasName</a></td>
+                        <td>hasName</td>
+                        <td></td>
+                        <td>
+                            
+                            <a href="http://www.microsoft.com/telemeta.owl#Operation" class="uri-link">Operation</a>
+                            
+                        </td>
+                        <td>
+                            
+                            <a href="http://www.w3.org/2001/XMLSchema#string" class="uri-link">string</a>
+                            
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        <div class="section" id="namespaces">
+            <h2>Namespaces</h2>
+            <table class="entity-table namespace-table">
+                <thead>
+                    <tr>
+                        <th>Prefix</th>
+                        <th>Namespace URI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>brick</td>
+                        <td><a href="https://brickschema.org/schema/Brick#" class="uri-link">https://brickschema.org/schema/Brick#</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>csvw</td>
+                        <td><a href="http://www.w3.org/ns/csvw#" class="uri-link">http://www.w3.org/ns/csvw#</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>dc</td>
+                        <td><a href="http://purl.org/dc/elements/1.1/" class="uri-link">http://purl.org/dc/elements/1.1/</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>dcat</td>
+                        <td><a href="http://www.w3.org/ns/dcat#" class="uri-link">http://www.w3.org/ns/dcat#</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>dcmitype</td>
+                        <td><a href="http://purl.org/dc/dcmitype/" class="uri-link">http://purl.org/dc/dcmitype/</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>dcterms</td>
+                        <td><a href="http://purl.org/dc/terms/" class="uri-link">http://purl.org/dc/terms/</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>dcam</td>
+                        <td><a href="http://purl.org/dc/dcam/" class="uri-link">http://purl.org/dc/dcam/</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>doap</td>
+                        <td><a href="http://usefulinc.com/ns/doap#" class="uri-link">http://usefulinc.com/ns/doap#</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>foaf</td>
+                        <td><a href="http://xmlns.com/foaf/0.1/" class="uri-link">http://xmlns.com/foaf/0.1/</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>geo</td>
+                        <td><a href="http://www.opengis.net/ont/geosparql#" class="uri-link">http://www.opengis.net/ont/geosparql#</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>odrl</td>
+                        <td><a href="http://www.w3.org/ns/odrl/2/" class="uri-link">http://www.w3.org/ns/odrl/2/</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>org</td>
+                        <td><a href="http://www.w3.org/ns/org#" class="uri-link">http://www.w3.org/ns/org#</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>prof</td>
+                        <td><a href="http://www.w3.org/ns/dx/prof/" class="uri-link">http://www.w3.org/ns/dx/prof/</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>prov</td>
+                        <td><a href="http://www.w3.org/ns/prov#" class="uri-link">http://www.w3.org/ns/prov#</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>qb</td>
+                        <td><a href="http://purl.org/linked-data/cube#" class="uri-link">http://purl.org/linked-data/cube#</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>schema</td>
+                        <td><a href="https://schema.org/" class="uri-link">https://schema.org/</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>sh</td>
+                        <td><a href="http://www.w3.org/ns/shacl#" class="uri-link">http://www.w3.org/ns/shacl#</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>skos</td>
+                        <td><a href="http://www.w3.org/2004/02/skos/core#" class="uri-link">http://www.w3.org/2004/02/skos/core#</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>sosa</td>
+                        <td><a href="http://www.w3.org/ns/sosa/" class="uri-link">http://www.w3.org/ns/sosa/</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>ssn</td>
+                        <td><a href="http://www.w3.org/ns/ssn/" class="uri-link">http://www.w3.org/ns/ssn/</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>time</td>
+                        <td><a href="http://www.w3.org/2006/time#" class="uri-link">http://www.w3.org/2006/time#</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>vann</td>
+                        <td><a href="http://purl.org/vocab/vann/" class="uri-link">http://purl.org/vocab/vann/</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>void</td>
+                        <td><a href="http://rdfs.org/ns/void#" class="uri-link">http://rdfs.org/ns/void#</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>wgs</td>
+                        <td><a href="https://www.w3.org/2003/01/geo/wgs84_pos#" class="uri-link">https://www.w3.org/2003/01/geo/wgs84_pos#</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>owl</td>
+                        <td><a href="http://www.w3.org/2002/07/owl#" class="uri-link">http://www.w3.org/2002/07/owl#</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rdf</td>
+                        <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#" class="uri-link">http://www.w3.org/1999/02/22-rdf-syntax-ns#</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rdfs</td>
+                        <td><a href="http://www.w3.org/2000/01/rdf-schema#" class="uri-link">http://www.w3.org/2000/01/rdf-schema#</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>xsd</td>
+                        <td><a href="http://www.w3.org/2001/XMLSchema#" class="uri-link">http://www.w3.org/2001/XMLSchema#</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>xml</td>
+                        <td><a href="http://www.w3.org/XML/1998/namespace" class="uri-link">http://www.w3.org/XML/1998/namespace</a></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+        
+        
+        
+    </div>
+    
+    <div class="footer">
+        <p>Generated by OnToology Local</p>
+        <p><a href="index.html">← Back to Index</a></p>
+    </div>
+    
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

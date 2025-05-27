@@ -1,0 +1,1606 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>npd_ontology - Validation Report</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .validation-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .summary-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .summary-card.errors { border-left: 4px solid #dc3545; }
+        .summary-card.warnings { border-left: 4px solid #ffc107; }
+        .summary-card.info { border-left: 4px solid #17a2b8; }
+        .summary-card.total { border-left: 4px solid #6c757d; }
+        
+        .issue-item {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .issue-item.error { border-left: 4px solid #dc3545; }
+        .issue-item.warning { border-left: 4px solid #ffc107; }
+        .issue-item.info { border-left: 4px solid #17a2b8; }
+        
+        .issue-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .issue-message {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        
+        .issue-details {
+            background: #f8f9fa;
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+        
+        .success-box {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="doc-header">
+        <h1>npd_ontology - Validation Report</h1>
+        <p>Basic ontology validation and quality checks</p>
+    </div>
+    
+    <div class="doc-content">
+        <div class="section">
+            <h2>Validation Summary</h2>
+            <div class="validation-summary">
+                <div class="summary-card total">
+                    <div class="stat-number">239</div>
+                    <div class="stat-label">Total Issues</div>
+                </div>
+                <div class="summary-card errors">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Errors</div>
+                </div>
+                <div class="summary-card warnings">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Warnings</div>
+                </div>
+                <div class="summary-card info">
+                    <div class="stat-number">233</div>
+                    <div class="stat-label">Suggestions</div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        <div class="section">
+            <h2>Errors (6)</h2>
+            
+            <div class="issue-item error">
+                <div class="issue-title">Circular Class Hierarchy</div>
+                <div class="issue-message">Circular inheritance detected involving BAATransfer</div>
+                
+            </div>
+            
+            <div class="issue-item error">
+                <div class="issue-title">Circular Class Hierarchy</div>
+                <div class="issue-message">Circular inheritance detected involving ChangeOfCompanyNameTransfer</div>
+                
+            </div>
+            
+            <div class="issue-item error">
+                <div class="issue-title">Circular Class Hierarchy</div>
+                <div class="issue-message">Circular inheritance detected involving MergerTakeoverTransfer</div>
+                
+            </div>
+            
+            <div class="issue-item error">
+                <div class="issue-title">Circular Class Hierarchy</div>
+                <div class="issue-message">Circular inheritance detected involving ProductionLicenceTransfer</div>
+                
+            </div>
+            
+            <div class="issue-item error">
+                <div class="issue-title">Circular Class Hierarchy</div>
+                <div class="issue-message">Circular inheritance detected involving SDFITransfer</div>
+                
+            </div>
+            
+            <div class="issue-item error">
+                <div class="issue-title">Circular Class Hierarchy</div>
+                <div class="issue-message">Circular inheritance detected involving Transfer</div>
+                
+            </div>
+            
+        </div>
+        
+        
+        
+        
+        
+        <div class="section">
+            <h2>Suggestions (233)</h2>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Missing Description</div>
+                <div class="issue-message">Consider adding a description (dc:description or rdfs:comment)</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Missing Version</div>
+                <div class="issue-message">Consider adding version information (owl:versionInfo)</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Missing Authors</div>
+                <div class="issue-message">Consider adding author information (dc:creator)</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Classes Without Labels</div>
+                <div class="issue-message">258 classes lack rdfs:label annotations</div>
+                
+                <div class="issue-details">
+                    
+                    http://sws.ifi.uio.no/vocab/npd-v2#AbandonedWell<br>
+                    
+                    http://sws.ifi.uio.no/vocab/npd-v2#Agent<br>
+                    
+                    http://sws.ifi.uio.no/vocab/npd-v2#AppraisalWell<br>
+                    
+                    http://sws.ifi.uio.no/vocab/npd-v2#AppraisalWellbore<br>
+                    
+                    http://www.opengis.net/ont/gml#Arc<br>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Classes Without Comments</div>
+                <div class="issue-message">284 classes lack rdfs:comment annotations</div>
+                
+                <div class="issue-details">
+                    
+                    http://sws.ifi.uio.no/vocab/npd-v2#AbandonedWell<br>
+                    
+                    http://www.opengis.net/ont/gml#AbstractCurveSegment<br>
+                    
+                    http://www.opengis.net/ont/gml#AbstractGeometricPrimitive<br>
+                    
+                    http://www.opengis.net/ont/gml#AbstractGeometry<br>
+                    
+                    http://www.opengis.net/ont/gml#AbstractGriddedSurface<br>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property TUFOperatorCompany has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property belongsToWell has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property belongsToWell has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property blockLocation has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property blockLocation has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property coreForWellbore has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property corePhotoURL has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property country has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property country has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property dependsOnTask has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property dependsOnTask has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property discoveryWellbore has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property documentURL has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property drillingFacility has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property drillingFacility has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property drillingOperatorCompany has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property factMapURL has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property factMapURL has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property factPageURL has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property factPageURL has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property geochronologicEra has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property broader has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property broader has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property broadMatch has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property broadMatch has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property broaderTransitive has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property broaderTransitive has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property closeMatch has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property closeMatch has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property exactMatch has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property exactMatch has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property narrower has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property narrower has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property narrowMatch has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property narrowMatch has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property narrowerTransitive has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property narrowerTransitive has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property related has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property related has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property relatedMatch has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property relatedMatch has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property inLithostratigraphicUnit has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property inLithostratigraphicUnit has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property mappingRelation has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property mappingRelation has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property isGeometryOfFeature has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property isGeometryOfFeature has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property lastOperatorCompany has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property mainAreaLocation has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property mainAreaLocation has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property member has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property member has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property npdPageURL has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property pipelineFromFacility has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property pipelineToFacility has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property pressReleaseURL has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property productionFacility has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property productionForDiscovery has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property productionForDiscovery has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property productionForField has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property productionForField has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property provinceLocation has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property quadrantLocation has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property reclassedFromWellbore has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property registeredInCountry has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property reservesForField has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property resourcesIncludedInDiscovery has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property shallowWellboreForField has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property shallowWellboreForField has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property wellOperator has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property wellboreAgeHcLevel1 has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property wellboreAgeHcLevel2 has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property wellboreAgeHcLevel3 has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property wellboreAgeTD has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property wellboreForDiscovery has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property wellboreFormationHc has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property wellboreFormationHc has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property wellboreFormationHcLevel1 has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property wellboreFormationHcLevel1 has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property wellboreFormationHcLevel2 has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property wellboreFormationHcLevel2 has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property wellboreFormationHcLevel3 has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property wellboreFormationHcLevel3 has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Object property wellboreFormationTD has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Object property wellboreFormationTD has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property SDFI has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property ZValueFrom has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property ZValueTo has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property additionalCorrelationProperty has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property areaSize has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property areaSize3DKm2 has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property asGML has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property asWKT has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property codeEW has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property codeNS has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property companyShare has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property coreIntervalUOM has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property coreNo has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property coreTotalLength has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property coresIntervalUOM has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property coresIntervalUOM has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property coresTotalLength has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property currentAreaSize has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property currentAreaSize has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property currentStatus has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property dateFieldOwnerFrom has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property dateFieldOwnerTo has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property dateLicenceAreaValidFrom has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property dateLicenceAreaValidTo has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property dateLicenceValidFrom has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property dateLicenceValidTo has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property dateLicenceValidTo has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property dateMessageRegistered has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property dateOperatorValidFrom has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property dateOperatorValidTo has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property dateResourceEstimate has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property dateSyncNPD has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property dateTransferValidFrom has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property dateUpdated has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property dateUpdated has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property dateUpdatedMax has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property dateUpdatedMax has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property dateWDSSQC has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property dateWellboreCompletion has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property dateWellboreEntry has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property decimalDegreesEW has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property decimalDegreesNS has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property degreesEW has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property degreesNS has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property drillPermit has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property facilityFunction has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property facilityFunction has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property facilityType has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property geodeticDatum has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property idNPD has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property isActive has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property isActive has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property isCoreSampleAvailable has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property isCurrentLicenceLicensee has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property isCurrentLicenceOperator has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property isDiscoveryWellbore has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property isDiscoveryWellbore has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property isEmpty has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property isFormerLicenceLicensee has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property isFormerLicenceOperator has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property isGeotechnicalMeasurement has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property isMarketAvailable has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property isMarketAvailable has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property isMultilateral has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property isMultilateral has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property isReentryWellbore has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property isSamplingPerformed has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property isShallowDrillingPerformed has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property isSimple has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property isStratigraphical has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property isStratigraphical has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property isSurfaceFacility has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property isTurnAreaIncluded has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property lengthPlannedBoatKm has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property lengthPlannedCdpKm has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property licenseeInterest has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property licenseeInterest has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property messageNo has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property messageType has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property minutesEW has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property minutesNS has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property name has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property name has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property notation has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property notation has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property polygonNo has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property producedCondensate has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property producedGas has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property producedNGL has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property producedOil has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property producedOilEquivalents has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property producedWater has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property productionMonth has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property productionYear has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property recoverableCondensate has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property recoverableGas has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property recoverableNGL has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property recoverableOil has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property recoverableOilEquivalents has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property remainingCondensate has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property remainingGas has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property remainingNGL has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property remainingOil has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property remainingOilEquivalents has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property secondsEW has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property secondsNS has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property sensorLength has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property sensorNumbers has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property sensorType has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property sourceNumber has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property sourcePressure has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property sourceSize has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property sourceType has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property status has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property stratigraphicLevel has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property transferDirection has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property transferredInterest has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property utmEW has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property utmNS has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property utmZone has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property wellboreCompletionYear has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property wellboreContent has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property wellboreEntryYear has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property wellboreFinalVerticalDepth has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property wellboreKellyBushElevation has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property wellboreLicensingActivity has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property wellboreNamePart1 has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property wellboreNamePart2 has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property wellboreNamePart3 has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property wellboreNamePart4 has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property wellboreNamePart5 has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property wellboreNamePart6 has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property wellboreParent has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property wellboreParent has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property wellborePlannedPurpose has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property wellborePlotSymbol has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property wellboreSeismicLocation has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property wellboreTotalDepth has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property wellboreType has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property wellboreType has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Domain</div>
+                <div class="issue-message">Datatype property wellboreWaterDepth has no domain</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Property Without Range</div>
+                <div class="issue-message">Datatype property wellboreWellType has no range</div>
+                
+            </div>
+            
+            <div class="issue-item info">
+                <div class="issue-title">Many Namespaces</div>
+                <div class="issue-message">Ontology declares 45 namespaces - consider if all are needed</div>
+                
+            </div>
+            
+        </div>
+        
+        
+        <div class="section">
+            <h2>About This Validation</h2>
+            <p>
+                This validation report covers basic ontology quality checks including:
+            </p>
+            <ul>
+                <li>Syntax validation</li>
+                <li>Metadata completeness</li>
+                <li>Class and property definitions</li>
+                <li>Basic consistency checks</li>
+                <li>Completeness suggestions</li>
+            </ul>
+            <p>
+                <strong>Note:</strong> This is a basic validation. For comprehensive 
+                ontology validation, consider using specialized tools like Pellet, 
+                HermiT, or the OOPS! service.
+            </p>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>Generated by OnToology Local</p>
+        <p><a href="index.html">← Back to Index</a></p>
+    </div>
+    
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

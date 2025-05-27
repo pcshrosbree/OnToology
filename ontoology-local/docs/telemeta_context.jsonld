@@ -1,0 +1,62 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "brick": "https://brickschema.org/schema/Brick#",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcmitype": "http://purl.org/dc/dcmitype/",
+    "dcam": "http://purl.org/dc/dcam/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "org": "http://www.w3.org/ns/org#",
+    "prof": "http://www.w3.org/ns/dx/prof/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "qb": "http://purl.org/linked-data/cube#",
+    "schema": "https://schema.org/",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "time": "http://www.w3.org/2006/time#",
+    "vann": "http://purl.org/vocab/vann/",
+    "void": "http://rdfs.org/ns/void#",
+    "wgs": "https://www.w3.org/2003/01/geo/wgs84_pos#",
+    "xml": "http://www.w3.org/XML/1998/namespace",
+    "wwwmicrosoftcom": "http://www.microsoft.com/telemeta.owl",
+    "Operation": {
+      "@id": "http://www.microsoft.com/telemeta.owl#Operation",
+      "@type": "@id"
+    },
+    "Read": {
+      "@id": "http://www.microsoft.com/telemeta.owl#Read",
+      "@type": "@id"
+    },
+    "ReadA": {
+      "@id": "http://www.microsoft.com/telemeta.owl#ReadA",
+      "@type": "@id"
+    },
+    "Service": {
+      "@id": "http://www.microsoft.com/telemeta.owl#Service",
+      "@type": "@id"
+    },
+    "Write": {
+      "@id": "http://www.microsoft.com/telemeta.owl#Write",
+      "@type": "@id"
+    },
+    "hasOperation": {
+      "@id": "http://www.microsoft.com/telemeta.owl#hasOperation",
+      "@type": "@id"
+    },
+    "hasName": {
+      "@id": "http://www.microsoft.com/telemeta.owl#hasName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    }
+  }
+}

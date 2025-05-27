@@ -1,16 +1,15 @@
 """
-Evaluation processor - integrates with OOPS! service for ontology evaluation.
+Evaluation processor - provides basic ontology evaluation capabilities.
 """
 
 from typing import Dict, Any
 from pathlib import Path
-import requests
 import logging
 from jinja2 import Template
 
 
 class EvaluationProcessor:
-    """Generates ontology evaluation reports using OOPS! service."""
+    """Generates basic ontology evaluation reports."""
     
     def __init__(self, config: Dict[str, Any], logger: logging.Logger):
         """
@@ -22,8 +21,6 @@ class EvaluationProcessor:
         """
         self.config = config
         self.logger = logger
-        self.oops_url = config.get('oops_url', 'http://oops.linkeddata.es/rest')
-        self.timeout = config.get('timeout', 10)
         
     def process(self, ontology_data: Dict[str, Any], base_name: str, 
                 output_dir: str) -> Dict[str, Any]:
@@ -42,8 +39,8 @@ class EvaluationProcessor:
             output_file = f"{base_name}_evaluation.html"
             output_path = Path(output_dir) / output_file
             
-            # Get evaluation from OOPS!
-            evaluation_result = self._get_oops_evaluation(ontology_data)
+            # Generate basic evaluation
+            evaluation_result = self._generate_basic_evaluation(ontology_data)
             
             # Generate HTML report
             html_content = self._generate_html_report(
@@ -66,68 +63,84 @@ class EvaluationProcessor:
             self.logger.error(f"Evaluation generation failed: {str(e)}")
             return {'error': str(e)}
     
-    def _get_oops_evaluation(self, ontology_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Get evaluation results from OOPS! service."""
+    def _generate_basic_evaluation(self, ontology_data: Dict[str, Any]) -> Dict[str, Any]:
+        """Generate basic evaluation metrics for the ontology."""
         try:
-            # Read ontology file content
-            with open(ontology_data['file_path'], 'r', encoding='utf-8') as f:
-                ontology_content = f.read()
-            
-            # Prepare request data
-            data = {
-                'ontologyContent': ontology_content,
-                'outputFormat': 'JSON'
+            metrics = {
+                'classes': len(ontology_data.get('classes', [])),
+                'properties': len(ontology_data.get('properties', [])),
+                'individuals': len(ontology_data.get('individuals', [])),
+                'annotations': len(ontology_data.get('annotations', [])),
             }
             
-            # Make request to OOPS!
-            self.logger.debug(f"Sending request to OOPS! service: {self.oops_url}")
-            response = requests.post(
-                self.oops_url,
-                data=data,
-                timeout=self.timeout,
-                headers={'Content-Type': 'application/x-www-form-urlencoded'}
-            )
+            # Basic quality checks
+            issues = []
+            suggestions = []
             
-            self.logger.debug(f"OOPS! response status: {response.status_code}")
-            self.logger.debug(f"OOPS! response content length: {len(response.text)}")
+            # Check for missing documentation
+            if not ontology_data.get('description'):
+                issues.append("Ontology lacks a description")
+                suggestions.append(
+                    "Add rdfs:comment or dc:description to provide "
+                    "ontology documentation"
+                )
             
-            if response.status_code == 200:
-                # Check if response has content
-                if not response.text.strip():
-                    self.logger.warning("OOPS! service returned empty response")
-                    return self._create_fallback_evaluation("Empty response from OOPS! service")
-                
-                try:
-                    return response.json()
-                except ValueError as json_error:
-                    self.logger.warning(f"OOPS! service returned invalid JSON: {json_error}")
-                    self.logger.debug(f"Response content: {response.text[:500]}...")
-                    return self._create_fallback_evaluation("Invalid JSON response from OOPS! service")
-            else:
-                self.logger.warning(f"OOPS! service returned status {response.status_code}: {response.text[:200]}")
-                return self._create_fallback_evaluation(f"OOPS! service error (HTTP {response.status_code})")
-                
-        except requests.RequestException as e:
-            self.logger.warning(f"Could not connect to OOPS! service: {str(e)}")
-            return self._create_fallback_evaluation(f"Connection error: {str(e)}")
+            # Check for missing labels
+            unlabeled_classes = [
+                c for c in ontology_data.get('classes', []) 
+                if not c.get('label')
+            ]
+            if unlabeled_classes:
+                issues.append(f"{len(unlabeled_classes)} classes lack "
+                             "rdfs:label")
+                suggestions.append(
+                    "Add rdfs:label to all classes for better readability"
+                )
+            
+            unlabeled_properties = [
+                p for p in ontology_data.get('properties', []) 
+                if not p.get('label')
+            ]
+            if unlabeled_properties:
+                issues.append(f"{len(unlabeled_properties)} properties lack "
+                             "rdfs:label")
+                suggestions.append(
+                    "Add rdfs:label to all properties for better readability"
+                )
+            
+            # Check for missing comments
+            uncommented_classes = [
+                c for c in ontology_data.get('classes', []) 
+                if not c.get('comment')
+            ]
+            if uncommented_classes:
+                issues.append(f"{len(uncommented_classes)} classes lack "
+                             "rdfs:comment")
+                suggestions.append(
+                    "Add rdfs:comment to classes to explain their purpose"
+                )
+            
+            return {
+                'metrics': metrics,
+                'issues': issues,
+                'suggestions': suggestions,
+                'summary': {
+                    'total_issues': len(issues),
+                    'documentation_issues': len([
+                        i for i in issues 
+                        if 'label' in i or 'comment' in i or 'description' in i
+                    ])
+                }
+            }
+            
         except Exception as e:
-            self.logger.warning(f"Error during OOPS! evaluation: {str(e)}")
-            return self._create_fallback_evaluation(f"Evaluation error: {str(e)}")
-    
-    def _create_fallback_evaluation(self, error_msg: str = None) -> Dict[str, Any]:
-        """Create a fallback evaluation when OOPS! is not available."""
-        warning_msg = error_msg or 'OOPS! service was not available during evaluation'
-        return {
-            'pitfalls': [],
-            'suggestions': [],
-            'warnings': [warning_msg],
-            'summary': {
-                'total_pitfalls': 0,
-                'critical_pitfalls': 0,
-                'important_pitfalls': 0,
-                'minor_pitfalls': 0
+            self.logger.warning(f"Error during basic evaluation: {str(e)}")
+            return {
+                'metrics': {},
+                'issues': [f"Evaluation error: {str(e)}"],
+                'suggestions': [],
+                'summary': {'total_issues': 1, 'documentation_issues': 0}
             }
-        }
     
     def _generate_html_report(self, ontology_data: Dict[str, Any], 
                              evaluation: Dict[str, Any]) -> str:
@@ -157,48 +170,22 @@ class EvaluationProcessor:
             text-align: center;
         }
         
-        .summary-card.critical { border-left: 4px solid #dc3545; }
-        .summary-card.important { border-left: 4px solid #ffc107; }
-        .summary-card.minor { border-left: 4px solid #17a2b8; }
         .summary-card.total { border-left: 4px solid #6c757d; }
+        .summary-card.documentation { border-left: 4px solid #17a2b8; }
         
-        .pitfall-item {
+        .issue-item {
             background: white;
             border-radius: 8px;
             padding: 1.5rem;
             margin-bottom: 1rem;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .pitfall-item.critical {
-            border-left: 4px solid #dc3545;
-        }
-        
-        .pitfall-item.important {
             border-left: 4px solid #ffc107;
         }
         
-        .pitfall-item.minor {
-            border-left: 4px solid #17a2b8;
-        }
-        
-        .pitfall-title {
+        .issue-title {
             font-weight: 600;
             color: #2c3e50;
             margin-bottom: 0.5rem;
-        }
-        
-        .pitfall-description {
-            color: #666;
-            margin-bottom: 1rem;
-        }
-        
-        .pitfall-elements {
-            background: #f8f9fa;
-            padding: 1rem;
-            border-radius: 4px;
-            font-family: monospace;
-            font-size: 0.9rem;
         }
         
         .warning-box {
@@ -216,95 +203,99 @@ class EvaluationProcessor:
             padding: 1rem;
             margin-bottom: 1rem;
         }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .metric-card {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .metric-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #007bff;
+        }
+        
+        .metric-label {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
     <div class="doc-header">
         <h1>{{ title }} - Evaluation Report</h1>
-        <p>Ontology evaluation using OOPS! (OntOlogy Pitfall Scanner)</p>
+        <p>Basic ontology quality evaluation</p>
     </div>
     
     <div class="doc-content">
-        {% if evaluation.warnings %}
-        <div class="warning-box">
-            <h3>⚠️ Warnings</h3>
-            <ul>
-                {% for warning in evaluation.warnings %}
-                <li>{{ warning }}</li>
-                {% endfor %}
-            </ul>
+        {% if evaluation.metrics %}
+        <div class="section">
+            <h2>Ontology Metrics</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-number">{{ evaluation.metrics.classes }}</div>
+                    <div class="metric-label">Classes</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">{{ evaluation.metrics.properties }}</div>
+                    <div class="metric-label">Properties</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">{{ evaluation.metrics.individuals }}</div>
+                    <div class="metric-label">Individuals</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">{{ evaluation.metrics.annotations }}</div>
+                    <div class="metric-label">Annotations</div>
+                </div>
+            </div>
         </div>
         {% endif %}
         
         {% if evaluation.summary %}
         <div class="section">
-            <h2>Evaluation Summary</h2>
+            <h2>Quality Summary</h2>
             <div class="evaluation-summary">
                 <div class="summary-card total">
-                    <div class="stat-number">{{ evaluation.summary.total_pitfalls or 0 }}</div>
-                    <div class="stat-label">Total Pitfalls</div>
+                    <div class="stat-number">{{ evaluation.summary.total_issues }}</div>
+                    <div class="stat-label">Total Issues</div>
                 </div>
-                <div class="summary-card critical">
-                    <div class="stat-number">{{ evaluation.summary.critical_pitfalls or 0 }}</div>
-                    <div class="stat-label">Critical</div>
-                </div>
-                <div class="summary-card important">
-                    <div class="stat-number">{{ evaluation.summary.important_pitfalls or 0 }}</div>
-                    <div class="stat-label">Important</div>
-                </div>
-                <div class="summary-card minor">
-                    <div class="stat-number">{{ evaluation.summary.minor_pitfalls or 0 }}</div>
-                    <div class="stat-label">Minor</div>
+                <div class="summary-card documentation">
+                    <div class="stat-number">{{ evaluation.summary.documentation_issues }}</div>
+                    <div class="stat-label">Documentation Issues</div>
                 </div>
             </div>
         </div>
         {% endif %}
         
-        {% if evaluation.pitfalls %}
+        {% if evaluation.issues %}
         <div class="section">
-            <h2>Detected Pitfalls</h2>
-            {% for pitfall in evaluation.pitfalls %}
-            <div class="pitfall-item {{ pitfall.severity|lower }}">
-                <div class="pitfall-title">
-                    {{ pitfall.name or 'Pitfall #' + loop.index|string }}
-                    {% if pitfall.severity %}
-                    <span class="badge badge-{{ pitfall.severity|lower }}">{{ pitfall.severity }}</span>
-                    {% endif %}
-                </div>
-                
-                {% if pitfall.description %}
-                <div class="pitfall-description">
-                    {{ pitfall.description }}
-                </div>
-                {% endif %}
-                
-                {% if pitfall.elements %}
-                <div class="pitfall-elements">
-                    <strong>Affected elements:</strong><br>
-                    {% for element in pitfall.elements %}
-                    {{ element }}<br>
-                    {% endfor %}
-                </div>
-                {% endif %}
-                
-                {% if pitfall.suggestion %}
-                <div class="pitfall-suggestion">
-                    <strong>Suggestion:</strong> {{ pitfall.suggestion }}
-                </div>
-                {% endif %}
+            <h2>Detected Issues</h2>
+            {% for issue in evaluation.issues %}
+            <div class="issue-item">
+                <div class="issue-title">{{ issue }}</div>
             </div>
             {% endfor %}
         </div>
         {% else %}
         <div class="success-box">
-            <h3>✅ No Pitfalls Detected</h3>
-            <p>Great! No common ontology pitfalls were detected in this ontology.</p>
+            <h3>✅ No Issues Detected</h3>
+            <p>Great! No quality issues were detected in this ontology.</p>
         </div>
         {% endif %}
         
         {% if evaluation.suggestions %}
         <div class="section">
-            <h2>General Suggestions</h2>
+            <h2>Suggestions for Improvement</h2>
             <ul>
                 {% for suggestion in evaluation.suggestions %}
                 <li>{{ suggestion }}</li>
@@ -314,21 +305,21 @@ class EvaluationProcessor:
         {% endif %}
         
         <div class="section">
-            <h2>About OOPS!</h2>
+            <h2>About This Evaluation</h2>
             <p>
-                OOPS! (OntOlogy Pitfall Scanner) is a web-based tool that helps ontology developers 
-                to detect some of the most common pitfalls appearing when developing ontologies. 
-                The tool is based on a catalog of pitfalls and provides suggestions on how to fix them.
+                This evaluation performs basic quality checks on the ontology, 
+                focusing on documentation completeness and structural consistency.
             </p>
             <p>
-                <strong>Note:</strong> This evaluation is automated and may not catch all potential 
-                issues. Manual review by domain experts is always recommended.
+                <strong>Note:</strong> This evaluation is automated and may not 
+                catch all potential issues. Manual review by domain experts is 
+                always recommended.
             </p>
         </div>
     </div>
     
     <div class="footer">
-        <p>Generated by OnToology Local using OOPS! service</p>
+        <p>Generated by OnToology Local</p>
         <p><a href="index.html">← Back to Index</a></p>
     </div>
     

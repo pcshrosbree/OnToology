@@ -496,8 +496,8 @@ class ValidationProcessor:
             </ul>
             <p>
                 <strong>Note:</strong> This is a basic validation. For comprehensive 
-                ontology validation, consider using specialized tools like Pellet, 
-                HermiT, or the OOPS! service.
+                ontology validation, consider using specialized tools like Pellet 
+                or HermiT.
             </p>
         </div>
     </div>

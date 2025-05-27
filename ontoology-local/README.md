@@ -6,7 +6,7 @@ A standalone command-line tool for generating comprehensive ontology documentati
 
 - **HTML Documentation**: Generate comprehensive, browsable HTML documentation for ontologies
 - **Visual Diagrams**: Create network diagrams showing ontology structure and relationships
-- **Quality Evaluation**: Integrate with OOPS! service for ontology pitfall detection
+- **Quality Evaluation**: Perform basic ontology quality checks and validation
 - **JSON-LD Context**: Generate JSON-LD context files for semantic web applications
 - **Validation Reports**: Perform basic ontology validation and quality checks
 - **Local Output**: All outputs are generated as local HTML files that can be browsed offline
@@ -57,7 +57,7 @@ python cli.py -i ./ontologies -o ./docs --parallel
 - `--output, -o`: Output directory for generated documentation
 - `--tools, -t`: Comma-separated list of tools to run (default: all)
   - `doc`: HTML documentation
-  - `eval`: OOPS! evaluation
+  - `eval`: Quality evaluation
   - `diagrams`: Visual diagrams
   - `jsonld`: JSON-LD context
   - `validation`: Basic validation
@@ -103,7 +103,7 @@ documentation:
 
 # Evaluation settings  
 evaluation:
-  oops_url: "http://oops.linkeddata.es/rest"
+  enable_basic_checks: true
   timeout: 30
 
 # Diagram settings
@@ -155,7 +155,6 @@ python cli.py -i ./ontologies -o ./output -c my-config.yaml -v
 - **Jinja2**: HTML template rendering
 - **Click**: Command-line interface
 - **PyYAML**: Configuration file parsing
-- **Requests**: HTTP requests for OOPS! service
 - **NetworkX**: Graph algorithms for diagrams
 - **Matplotlib**: Diagram generation
 
@@ -174,7 +173,7 @@ The tool is organized into several modules:
 3. **OutputManager**: Manages output directory and generates index pages
 4. **Processors**: Modular processors for different output types
    - DocumentationProcessor: HTML documentation
-   - EvaluationProcessor: OOPS! integration
+   - EvaluationProcessor: Quality evaluation
    - DiagramProcessor: Visual diagrams
    - JsonLdProcessor: JSON-LD contexts
    - ValidationProcessor: Basic validation
@@ -199,7 +198,7 @@ Sanity check: `cd ontoology-local && python example.py`
 
 1. **Import Errors**: Ensure all dependencies are installed with `pip install -r requirements.txt`
 
-2. **OOPS! Service Unavailable**: The evaluation processor will generate a fallback report if the OOPS! service is unreachable
+2. **Evaluation Issues**: The evaluation processor will generate basic quality reports for ontology analysis
 
 3. **Large Ontologies**: For very large ontologies, consider:
    - Reducing `max_nodes` in diagram configuration

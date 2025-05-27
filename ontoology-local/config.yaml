@@ -8,7 +8,7 @@ documentation:
   
 # Evaluation processor settings  
 evaluation:
-  oops_url: "http://oops.linkeddata.es/rest"  # OOPS! service URL
+  enable_basic_checks: true  # Enable basic quality checks
   timeout: 10  # Request timeout in seconds
   
 # Diagram processor settings
